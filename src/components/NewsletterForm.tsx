@@ -2,6 +2,8 @@
 
 import { useState, useCallback } from 'react';
 import Toast from './Toast';
+import { db } from '@/lib/firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 export default function NewsletterForm() {
   const [email, setEmail] = useState('');
@@ -9,7 +11,7 @@ export default function NewsletterForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = useCallback(
-    (e: React.FormEvent) => {
+    async (e: React.FormEvent) => {
       e.preventDefault();
       if (!email.trim()) {
         setToast({ message: 'Please enter your email address', type: 'error' });
@@ -21,11 +23,20 @@ export default function NewsletterForm() {
         return;
       }
       setIsSubmitting(true);
-      setTimeout(() => {
+      
+      try {
+        await addDoc(collection(db, 'subscribers'), {
+          email: email.trim(),
+          subscribedAt: serverTimestamp()
+        });
         setToast({ message: 'Thanks for subscribing! 🎉', type: 'success' });
         setEmail('');
+      } catch (error) {
+        console.error('Error adding subscriber:', error);
+        setToast({ message: 'Failed to subscribe. Please try again.', type: 'error' });
+      } finally {
         setIsSubmitting(false);
-      }, 800);
+      }
     },
     [email]
   );
