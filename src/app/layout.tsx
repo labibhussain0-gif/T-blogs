@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "High-end technology and AI blog featuring the latest in software engineering, artificial intelligence, and tech trends.",
   metadataBase: new URL("https://t-blogs.com"),
   verification: {
-    google: "9fSkG0AxbLBGjekZw1f9F5zhENwQiOCOe6YKnaVwRS8",
+    google: "gLnIaMyeeNHGjgzcTtUuYdd6qHITQh4n9ZYJhPhst7I",
   },
   openGraph: {
     title: "T-blogs | Tech & AI Insights",
