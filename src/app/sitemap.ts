@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://t-blogs.com'; // Change to actual production domain if needed, currently t-blogs.web.app or similar
+  const baseUrl = 'https://t-blogs.web.app';
 
   return [
     {
