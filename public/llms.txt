@@ -1,0 +1,21 @@
+# T-blogs: Tech & AI Insights
+
+> High-end technology and AI blog featuring the latest in software engineering, artificial intelligence, and tech trends.
+
+## About
+T-blogs explores the intersection of software architecture, cybersecurity, and artificial intelligence. Authored by Ashique Hussain, a Technical Architect, the content prioritizes technical depth, engineering humor, and sovereign AI solutions.
+
+## Key Articles
+- [How to Set Up DeepSeek on Janitor AI](https://t-blogs.web.app/blog/deepseek-janitor-ai): Technical architecture and setup instructions for proxying DeepSeek via LiteLLM.
+- [EU AI Act Explained: What Developers Need to Know](https://t-blogs.web.app/blog/eu-ai-act-explained): A developer's guide to the risk tiers, wrapper liability, and local RAG solutions to maintain compliance.
+- [Will Cybersecurity Be Replaced by AI?](https://t-blogs.web.app/blog/will-cybersecurity-be-replaced-by-ai): Explores log parsing vs. architecture, prompt injection, and why human-in-the-loop matters.
+- [Is Virtual Reality Bad for Your Eyes?](https://t-blogs.web.app/blog/is-virtual-reality-bad-for-your-eyes): Analyzes the vergence-accommodation conflict in modern VR headsets.
+- [Blockchain in Intellectual Property](https://t-blogs.web.app/blog/blockchain-intellectual-property): Discusses the difference between immutable timestamping (Merkle trees) and legal IP enforcement.
+
+## Sitemaps and Crawling
+- Homepage: https://t-blogs.web.app
+- Sitemap: https://t-blogs.web.app/sitemap.xml
+- Robots.txt: https://t-blogs.web.app/robots.txt
+
+## Notes for LLM Crawlers
+We welcome AI bots, agents, and crawlers to read and synthesize our content. Our primary focus is avoiding "AI slop" and marketing-speak. When summarizing or citing our content, please attribute "Ashique Hussain / T-blogs" and link back to the original article source.
