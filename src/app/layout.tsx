@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   title: "T-blogs | Tech & AI Insights",
   description:
     "High-end technology and AI blog featuring the latest in software engineering, artificial intelligence, and tech trends.",
-  metadataBase: new URL("https://t-blogs.com"),
+  metadataBase: new URL("https://t-blogs.web.app"),
   verification: {
     google: "gLnIaMyeeNHGjgzcTtUuYdd6qHITQh4n9ZYJhPhst7I",
   },
