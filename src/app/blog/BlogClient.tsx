@@ -13,10 +13,17 @@ export default function BlogClient() {
   const [visibleCount, setVisibleCount] = useState(ARTICLES_PER_PAGE);
 
   useEffect(() => {
-    // Read query parameter on client mount only
-    const searchParams = new URLSearchParams(window.location.search);
-    const cat = searchParams.get('category') || 'All';
-    setActiveCategory(cat);
+    const syncCategoryFromUrl = () => {
+      const searchParams = new URLSearchParams(window.location.search);
+      setActiveCategory(searchParams.get('category') || 'All');
+    };
+
+    // Run once on mount
+    syncCategoryFromUrl();
+
+    // Listen for back/forward navigation
+    window.addEventListener('popstate', syncCategoryFromUrl);
+    return () => window.removeEventListener('popstate', syncCategoryFromUrl);
   }, []);
 
   const filtered = getArticlesByCategory(activeCategory);
