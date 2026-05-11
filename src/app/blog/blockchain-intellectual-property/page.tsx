@@ -7,7 +7,6 @@ import { SITE_NAME, SITE_URL } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
 
-
 export const metadata: Metadata = {
   title: `Blockchain in Intellectual Property: A Practical Overview | ${SITE_NAME}`,
   description: `Blockchain in intellectual property: how blockchain registers copyright, verifies ownership, enables licensing, and what limitations still exist.`,
@@ -66,7 +65,8 @@ export default function BlockchainIP() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '40px', paddingBottom: '24px', borderBottom: '1px solid var(--border-light)' }}>
           <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-tertiary)', textTransform: 'uppercase', letterSpacing: '0.08em', marginRight: '8px' }}>Share</span>
-          <ShareButton />        </div>
+          <ShareButton title="Blockchain in Intellectual Property: A Practical Overview" url={`${SITE_URL}/blog/blockchain-intellectual-property`} />
+        </div>
 
         <div style={{ position: 'relative', width: '100%', height: '400px', marginBottom: '48px', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
           <Image src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop" alt="Blockchain network visualization representing distributed ledger technology" fill priority sizes="(max-width: 768px) 100vw, 800px" className="object-cover" />

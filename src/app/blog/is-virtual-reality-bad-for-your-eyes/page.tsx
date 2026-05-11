@@ -7,7 +7,6 @@ import { SITE_NAME, SITE_URL } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
 
-
 export const metadata: Metadata = {
   title: `Is Virtual Reality Bad for Your Eyes? What the Research Says | ${SITE_NAME}`,
   description: `Is virtual reality bad for your eyes? Explore the research on VR eye strain, myopia risk, and safe usage guidelines for adults and children.`,
@@ -66,7 +65,8 @@ export default function VirtualRealityEyes() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '40px', paddingBottom: '24px', borderBottom: '1px solid var(--border-light)' }}>
           <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-tertiary)', textTransform: 'uppercase', letterSpacing: '0.08em', marginRight: '8px' }}>Share</span>
-          <ShareButton />        </div>
+          <ShareButton title="Is Virtual Reality Bad for Your Eyes? What the Research Says" url={`${SITE_URL}/blog/is-virtual-reality-bad-for-your-eyes`} />
+        </div>
 
         <div style={{ position: 'relative', width: '100%', height: '400px', marginBottom: '48px', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
           <Image src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?q=80&w=1200&auto=format&fit=crop" alt="Person wearing a VR headset exploring virtual reality experiences" fill priority sizes="(max-width: 768px) 100vw, 800px" className="object-cover" />

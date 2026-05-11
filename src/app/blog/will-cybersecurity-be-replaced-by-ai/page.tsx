@@ -7,7 +7,6 @@ import { SITE_NAME, SITE_URL } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
 
-
 export const metadata: Metadata = {
   title: `Will Cybersecurity Be Replaced by AI? The Honest Answer | ${SITE_NAME}`,
   description: `Will cybersecurity be replaced by AI? Understand which roles AI automates, which it enhances, and what skills protect your cybersecurity career.`,
@@ -66,7 +65,8 @@ export default function CybersecurityReplaced() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '40px', paddingBottom: '24px', borderBottom: '1px solid var(--border-light)' }}>
           <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-tertiary)', textTransform: 'uppercase', letterSpacing: '0.08em', marginRight: '8px' }}>Share</span>
-          <ShareButton />        </div>
+          <ShareButton title="Will Cybersecurity Be Replaced by AI? The Honest Answer" url={`${SITE_URL}/blog/will-cybersecurity-be-replaced-by-ai`} />
+        </div>
 
         <div style={{ position: 'relative', width: '100%', height: '400px', marginBottom: '48px', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
           <Image src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop" alt="Cybersecurity lock and circuit board symbolizing AI-powered security systems" fill priority sizes="(max-width: 768px) 100vw, 800px" className="object-cover" />

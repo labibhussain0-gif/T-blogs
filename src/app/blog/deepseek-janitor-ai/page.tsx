@@ -7,7 +7,6 @@ import { SITE_NAME, SITE_URL } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
 
-
 export const metadata: Metadata = {
   title: `How to Set Up DeepSeek on Janitor AI | Technical Guide | ${SITE_NAME}`,
   description: `A definitive technical guide to running DeepSeek's open-weights models through Janitor AI.`,
@@ -124,7 +123,8 @@ export default function DeepSeekJanitorAIGuide() {
           <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-tertiary)', textTransform: 'uppercase', letterSpacing: '0.08em', marginRight: '8px' }}>
             Share
           </span>
-          <ShareButton />        </div>
+          <ShareButton title="How to Set Up DeepSeek on Janitor AI | Technical Guide" url={`${SITE_URL}/blog/deepseek-janitor-ai`} />
+        </div>
 
         <div
           style={{

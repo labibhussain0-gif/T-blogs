@@ -7,7 +7,6 @@ import { SITE_NAME, SITE_URL } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
 
-
 export const metadata: Metadata = {
   title: `EU AI Act Explained: What Developers Need to Know in 2026 | ${SITE_NAME}`,
   description: `EU AI Act news and explained for developers: risk tiers, compliance deadlines, prohibited systems, and what you must do before shipping AI to EU users.`,
@@ -66,7 +65,8 @@ export default function EuAiActExplained() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '40px', paddingBottom: '24px', borderBottom: '1px solid var(--border-light)' }}>
           <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-tertiary)', textTransform: 'uppercase', letterSpacing: '0.08em', marginRight: '8px' }}>Share</span>
-          <ShareButton />        </div>
+          <ShareButton title="EU AI Act Explained: What Developers Need to Know in 2026" url={`${SITE_URL}/blog/eu-ai-act-explained`} />
+        </div>
 
         <div style={{ position: 'relative', width: '100%', height: '400px', marginBottom: '48px', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
           <Image src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop" alt="European Union flag representing the EU AI Act regulation" fill priority sizes="(max-width: 768px) 100vw, 800px" className="object-cover" />
