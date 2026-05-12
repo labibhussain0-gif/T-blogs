@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/'],
     },
-    sitemap: 'https://t-blogs.web.app/sitemap.xml',
+    sitemap: 'https://tblogs.site/sitemap.xml',
   }
 }

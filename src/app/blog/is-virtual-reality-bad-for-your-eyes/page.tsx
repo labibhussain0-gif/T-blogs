@@ -29,7 +29,7 @@ export default function VirtualRealityEyes() {
     "author": [{
       "@type": "Person",
       "name": "Ashique Hussain",
-      "url": "https://t-blogs.com/about/author"
+      "url": "https://tblogs.site/about/author"
     }]
   };
 

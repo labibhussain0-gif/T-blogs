@@ -289,6 +289,7 @@ function SocialIcon({ label, href, children }: { label: string; href: string; ch
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
+      title={label}
       className="transition-colors duration-200"
       style={{
         width: '36px',
@@ -308,6 +309,7 @@ function SocialIcon({ label, href, children }: { label: string; href: string; ch
         e.currentTarget.style.background = 'transparent';
       }}
     >
+      <span className="sr-only">{label}</span>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         {children}
       </svg>

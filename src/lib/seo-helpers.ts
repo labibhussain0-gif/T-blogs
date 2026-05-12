@@ -1,7 +1,7 @@
 // src/lib/seo-helpers.ts
 // Centralized JSON-LD schema generators — used across all pages
 
-export const SITE_URL = 'https://t-blogs.com';
+export const SITE_URL = 'https://tblogs.site';
 export const SITE_NAME = 'T-blogs';
 export const SITE_DESCRIPTION =
   'High-end technology and AI blog featuring the latest in software engineering, artificial intelligence, and tech trends.';
