@@ -443,7 +443,20 @@ export const articles: Article[] = [
       'disclosure sentiment: machine learning vs. dictionary methods.'
     ],
     commentCount: 0,
-    faq: []
+    faq: [
+      {
+        question: 'What is the difference between hypertension prediction using machine learning on Kaggle versus in production?',
+        answer: 'While Kaggle competitions provide clean, static datasets focused purely on model accuracy, production environments require handling noisy, streaming data, addressing HIPAA/GDPR compliance, and deploying models as scalable inference APIs.'
+      },
+      {
+        question: 'What does a bionic AI ML engineer or machine learning developer do differently?',
+        answer: 'A bionic AI ML engineer leverages AI coding assistants and automation to drastically accelerate the deployment pipeline. They focus less on writing boilerplate training loops and more on system architecture, data governance, and API design.'
+      },
+      {
+        question: 'How do dictionary methods compare with disclosure sentiment using machine learning in healthcare?',
+        answer: 'Dictionary methods rely on rigid keyword matching, which struggles with medical nuances and context. Machine learning models for disclosure sentiment understand semantic meaning, allowing for much higher accuracy in interpreting unstructured clinical notes.'
+      }
+    ]
   },
   {
     id: 9,
