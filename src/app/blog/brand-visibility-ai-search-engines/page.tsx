@@ -3,7 +3,7 @@ import Image from 'next/image';
 import ArticleCard from '@/components/ArticleCard';
 import FAQSection from '@/components/FAQSection';
 import { Metadata } from 'next';
-import { SITE_NAME, SITE_URL } from '@/lib/seo-helpers';
+import { SITE_NAME, SITE_URL, generateArticleSchema } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
 
@@ -33,32 +33,16 @@ export default function AISearchVisibilityPost() {
   const article = getArticleBySlug('brand-visibility-ai-search-engines');
   const relatedArticles = getRelatedArticles('brand-visibility-ai-search-engines', 3);
 
-  const faqSchema = article?.faq && article.faq.length > 0 ? {
-    "@type": "FAQPage",
-    "mainEntity": article.faq.map(q => ({
-      "@type": "Question",
-      "name": q.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": q.answer
-      }
-    }))
-  } : undefined;
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Article",
-        "headline": "Architecting for LLMs: How to Improve Brand Visibility in AI Search Engines",
-        "image": ["https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop"],
-        "datePublished": "2026-05-14T00:00:00.000Z",
-        "dateModified": "2026-05-14T00:00:00.000Z",
-        "author": [{ "@type": "Person", "name": "Ashique Hussain", "url": "https://tblogs.site/about/author" }]
-      },
-      ...(faqSchema ? [faqSchema] : [])
-    ]
-  };
+  const jsonLd = generateArticleSchema({
+    title: "Architecting for LLMs: How to Improve Brand Visibility in AI Search Engines",
+    description: "Improve brand visibility in AI search engines using semantic HTML, llms.txt, and structured JSON-LD.",
+    url: `${SITE_URL}/blog/brand-visibility-ai-search-engines`,
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop",
+    datePublished: "2026-05-14T00:00:00.000Z",
+    dateModified: "2026-05-14T00:00:00.000Z",
+    authorName: "Ashique Hussain",
+    authorUrl: "https://tblogs.site/about/author",
+  });
 
   return (
     <article style={{ background: 'var(--bg-cream)', minHeight: '100vh', fontFamily: 'var(--font-body)' }}>
