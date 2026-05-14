@@ -482,7 +482,24 @@ export const articles: Article[] = [
       'droven.io technology blog'
     ],
     commentCount: 0,
-    faq: []
+    faq: [
+      {
+        question: 'What is the most significant shift in HR tech news today?',
+        answer: 'The major focus in HR tech today is the transition from legacy, monolithic human capital management (HCM) systems to composable architectures. This allows for native AI integration, enabling automated resume screening and dynamic workforce analytics.'
+      },
+      {
+        question: 'How is AI reshaping real estate tech news?',
+        answer: 'Real estate tech is rapidly adopting vector databases to power semantic search for property listings. Instead of filtering by square footage, users can query systems for hyper-specific requirements like &quot;open-concept loft with afternoon sun,&quot; shifting the backend from standard SQL to specialized ML pipelines.'
+      },
+      {
+        question: 'What does legal tech news today say about AI in law firms?',
+        answer: 'AI is fundamentally altering how law firms operate, primarily through Retrieval-Augmented Generation (RAG). By embedding case law and internal firm documents into secure, private large language models, paralegals and attorneys can instantly surface relevant precedents without risking client confidentiality.'
+      },
+      {
+        question: 'Why are technical blogs like the droven.io technology blog focusing on sector-specific architecture?',
+        answer: 'As AI matures, generic integrations are no longer sufficient. Sector-specific architecture requires deep understanding of industry constraints—such as HIPAA in healthcare or SOC2 in legal and HR—making specialized engineering approaches critical for production deployments.'
+      }
+    ]
   },
   {
     id: 10,
