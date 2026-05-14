@@ -92,11 +92,12 @@ export default function MachineLearningHealthcarePost() {
           </h1>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
-            <img
+            <Image
               src={article?.authorAvatar ?? '/author-ashique.jpg'}
-              alt={article?.author ?? 'Ashique Hussain'}
-              className="rounded-full"
-              style={{ width: '36px', height: '36px', objectFit: 'cover' }}
+              alt="Author"
+              width={36}
+              height={36}
+              className="rounded-full object-cover"
             />
             <div>
               <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--ink-primary)' }}>
