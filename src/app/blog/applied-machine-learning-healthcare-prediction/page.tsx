@@ -37,61 +37,32 @@ export default function MachineLearningHealthcarePost() {
   });
 
   return (
-    <article style={{ background: 'var(--bg-cream)', minHeight: '100vh', fontFamily: 'var(--font-body)' }}>
+    <article className="bg-[var(--bg-cream)] min-h-screen font-[var(--font-body)]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 24px 80px' }}>
+      <div className="max-w-[800px] mx-auto px-6 pt-12 pb-20">
         <nav
           aria-label="Breadcrumb"
-          style={{
-            marginBottom: '32px',
-            fontSize: '14px',
-            fontWeight: 500,
-            color: 'var(--ink-tertiary)',
-            fontFamily: 'var(--font-body)',
-          }}
+          className="mb-8 text-sm font-medium text-[var(--ink-tertiary)] font-[var(--font-body)]"
         >
-          <Link href="/blog" className="text-[var(--ink-tertiary)] hover:text-[var(--accent-orange)] transition-colors duration-200" style={{ textDecoration: 'none' }}>
+          <Link href="/blog" className="text-[var(--ink-tertiary)] hover:text-[var(--accent-orange)] transition-colors duration-200 no-underline">
             ← Back to Blog
           </Link>
         </nav>
 
-        <header style={{ marginBottom: '40px' }}>
-          <span
-            style={{
-              display: 'inline-block',
-              background: 'var(--accent-orange)',
-              color: '#fff',
-              padding: '4px 14px',
-              borderRadius: 'var(--radius-full)',
-              fontSize: '11px',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              letterSpacing: '0.06em',
-              marginBottom: '20px',
-            }}
-          >
+        <header className="mb-10">
+          <span className="inline-block bg-[var(--accent-orange)] text-white px-[14px] py-1 rounded-[var(--radius-full)] text-[11px] font-bold uppercase tracking-[0.06em] mb-5">
             {article?.category ?? 'AI Research'}
           </span>
 
-          <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontWeight: 900,
-              fontSize: 'clamp(2rem, 4vw, 3rem)',
-              lineHeight: 1.12,
-              color: 'var(--ink-primary)',
-              marginBottom: '24px',
-              letterSpacing: '-0.02em',
-            }}
-          >
-            From Kaggle to Production: <span style={{ color: 'var(--accent-orange)' }}>Applied Machine Learning in Healthcare</span>
+          <h1 className="font-[var(--font-display)] font-black text-[clamp(2rem,4vw,3rem)] leading-[1.12] text-[var(--ink-primary)] mb-6 tracking-[-0.02em]">
+            From Kaggle to Production: <span className="text-[var(--accent-orange)]">Applied Machine Learning in Healthcare</span>
           </h1>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+          <div className="flex items-center gap-3 flex-wrap">
             <Image
               src={article?.authorAvatar ?? '/author-ashique.jpg'}
               alt="Author"
@@ -100,42 +71,24 @@ export default function MachineLearningHealthcarePost() {
               className="rounded-full object-cover"
             />
             <div>
-              <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--ink-primary)' }}>
+              <span className="text-sm font-semibold text-[var(--ink-primary)]">
                 {article?.author ?? 'Ashique Hussain'}
               </span>
-              <span style={{ fontSize: '13px', color: 'var(--ink-tertiary)', marginLeft: '8px' }}>
+              <span className="text-[13px] text-[var(--ink-tertiary)] ml-2">
                 &middot; {article?.date ?? 'May 16, 2026'} &middot; {article?.readTime ?? '10 min read'}
               </span>
             </div>
           </div>
         </header>
 
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            marginBottom: '40px',
-            paddingBottom: '24px',
-            borderBottom: '1px solid var(--border-light)',
-          }}
-        >
-          <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-tertiary)', textTransform: 'uppercase', letterSpacing: '0.08em', marginRight: '8px' }}>
+        <div className="flex items-center gap-2 mb-10 pb-6 border-b border-[var(--border-light)]">
+          <span className="text-xs font-semibold text-[var(--ink-tertiary)] uppercase tracking-[0.08em] mr-2">
             Share
           </span>
           <ShareButton title="From Kaggle to Production: Applied Machine Learning in Healthcare" url={`${SITE_URL}/blog/applied-machine-learning-healthcare-prediction`} />
         </div>
 
-        <div
-          style={{
-            position: 'relative',
-            width: '100%',
-            height: '400px',
-            marginBottom: '48px',
-            borderRadius: 'var(--radius-lg)',
-            overflow: 'hidden',
-          }}
-        >
+        <div className="relative w-full h-[400px] mb-12 rounded-[var(--radius-lg)] overflow-hidden">
           <Image
             src={article?.image ?? "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop"}
             alt={article?.imageAlt ?? "Medical technology and machine learning data"}
@@ -146,15 +99,15 @@ export default function MachineLearningHealthcarePost() {
           />
         </div>
 
-        <div className="prose-editorial" style={{ fontSize: '17px', lineHeight: 1.8, color: 'var(--ink-secondary)' }}>
-          <p style={{ fontSize: '19px', lineHeight: 1.7, marginBottom: '32px', color: 'var(--ink-primary)', fontWeight: 400 }}>
+        <div className="prose-editorial text-[17px] leading-[1.8] text-[var(--ink-secondary)]">
+          <p className="text-[19px] leading-[1.7] mb-8 text-[var(--ink-primary)] font-normal">
             When a data scientist first encounters <strong>hypertension prediction using machine learning Kaggle</strong> competitions, they are presented with a utopia. The dataset is a neatly organized CSV file. Missing values might exist, but they are localized. The target variable is perfectly labeled. You can split the data, run XGBoost, and achieve an AUC-ROC of 0.89. The leaderboard turns green.
           </p>
           <p>
             Then you get hired to build the real thing in a hospital system. Suddenly, the pristine CSV vanishes, replaced by a labyrinth of unstandardized HL7 streams, unstructured clinical notes, and missing lab results. Welcome to applied machine learning in healthcare.
           </p>
 
-          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
+          <h2 className="font-[var(--font-display)] font-bold text-[1.75rem] text-[var(--ink-primary)] mt-12 mb-5 pb-3 border-b border-[var(--border-light)]">
             The Role of the Bionic ML Engineer
           </h2>
           <p>
@@ -164,7 +117,7 @@ export default function MachineLearningHealthcarePost() {
             In production, a model is only 5% of the codebase. The other 95% handles data ingestion, feature store synchronization, drift detection, and secure inference endpoints. Bionic developers orchestrate this complexity by treating the machine learning model as just another microservice within a larger, secure Kubernetes environment.
           </p>
 
-          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
+          <h2 className="font-[var(--font-display)] font-bold text-[1.75rem] text-[var(--ink-primary)] mt-12 mb-5 pb-3 border-b border-[var(--border-light)]">
             Overcoming Unstructured Data: Sentiment and Context
           </h2>
           <p>
@@ -174,37 +127,37 @@ export default function MachineLearningHealthcarePost() {
             Dictionary methods fail when clinical language gets messy. If a note says &quot;Patient denies a history of severe hypertension,&quot; a dictionary method might trigger a false positive simply because the word &quot;hypertension&quot; is present. Machine learning models, particularly large language models (LLMs) fine-tuned on medical corpora, understand the negation. They can parse the complex sentiment of clinical disclosures, separating actual diagnoses from family history or preventative discussions.
           </p>
 
-          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
+          <h2 className="font-[var(--font-display)] font-bold text-[1.75rem] text-[var(--ink-primary)] mt-12 mb-5 pb-3 border-b border-[var(--border-light)]">
             Architecting the Secure ML Pipeline
           </h2>
           <p>
             Moving to production requires a robust architecture. Here is what a modern, production-grade healthcare ML pipeline looks like:
           </p>
-          <ul style={{ margin: '24px 0', paddingLeft: '24px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <ul className="my-6 pl-6 flex flex-col gap-4">
             <li>
-              <strong style={{ color: 'var(--ink-primary)' }}>Data Ingestion:</strong> Kafka or Google Pub/Sub handles real-time streaming of HL7/FHIR messages from electronic health records (EHR).
+              <strong className="text-[var(--ink-primary)]">Data Ingestion:</strong> Kafka or Google Pub/Sub handles real-time streaming of HL7/FHIR messages from electronic health records (EHR).
             </li>
             <li>
-              <strong style={{ color: 'var(--ink-primary)' }}>Feature Store:</strong> Tools like Feast or Hopsworks maintain a centralized repository of patient features (e.g., historical blood pressure averages, BMI trends) to ensure consistency between training and inference.
+              <strong className="text-[var(--ink-primary)]">Feature Store:</strong> Tools like Feast or Hopsworks maintain a centralized repository of patient features (e.g., historical blood pressure averages, BMI trends) to ensure consistency between training and inference.
             </li>
             <li>
-              <strong style={{ color: 'var(--ink-primary)' }}>Model Registry:</strong> MLflow tracks model versions, ensuring that any deployed model can be audited and rolled back if performance degrades.
+              <strong className="text-[var(--ink-primary)]">Model Registry:</strong> MLflow tracks model versions, ensuring that any deployed model can be audited and rolled back if performance degrades.
             </li>
             <li>
-              <strong style={{ color: 'var(--ink-primary)' }}>Inference API:</strong> Models are served using FastAPI or Triton Inference Server, packaged in Docker containers, and deployed on secure cloud infrastructure that strictly complies with HIPAA and GDPR regulations.
+              <strong className="text-[var(--ink-primary)]">Inference API:</strong> Models are served using FastAPI or Triton Inference Server, packaged in Docker containers, and deployed on secure cloud infrastructure that strictly complies with HIPAA and GDPR regulations.
             </li>
           </ul>
 
-          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
+          <h2 className="font-[var(--font-display)] font-bold text-[1.75rem] text-[var(--ink-primary)] mt-12 mb-5 pb-3 border-b border-[var(--border-light)]">
             Monitoring and Drift Detection
           </h2>
           <p>
             A model deployed is a model degrading. Patient demographics shift, new measurement tools are introduced, and clinical coding standards evolve. Implementing drift detection using tools like Evidently AI is critical. When the distribution of incoming blood pressure readings shifts, the MLOps pipeline must automatically trigger alerts for the data science team to retrain the model.
           </p>
 
-          <hr style={{ border: 'none', borderTop: '1px solid var(--border-light)', margin: '48px 0' }} />
+          <hr className="border-none border-t border-[var(--border-light)] my-12" />
 
-          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.5rem', color: 'var(--ink-primary)', marginBottom: '16px' }}>
+          <h2 className="font-[var(--font-display)] font-bold text-2xl text-[var(--ink-primary)] mb-4">
             Conclusion
           </h2>
           <p>
@@ -214,8 +167,8 @@ export default function MachineLearningHealthcarePost() {
       </div>
 
       {article?.faq && article.faq.length > 0 && (
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 24px', marginBottom: '64px' }}>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginBottom: '24px' }}>
+        <div className="max-w-[800px] mx-auto px-6 mb-16">
+          <h2 className="font-[var(--font-display)] font-bold text-[1.75rem] text-[var(--ink-primary)] mb-6">
             Frequently Asked Questions
           </h2>
           <FAQSection faqs={article.faq} />
@@ -223,23 +176,9 @@ export default function MachineLearningHealthcarePost() {
       )}
 
       {relatedArticles.length > 0 && (
-        <section
-          style={{
-            borderTop: '1px solid var(--border-light)',
-            background: 'var(--bg-white)',
-            padding: '80px 24px',
-          }}
-        >
-          <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-            <h2
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontWeight: 700,
-                fontSize: 'clamp(1.5rem, 3vw, 2rem)',
-                color: 'var(--ink-primary)',
-                marginBottom: '40px',
-              }}
-            >
+        <section className="border-t border-[var(--border-light)] bg-[var(--bg-white)] py-20 px-6">
+          <div className="max-w-[1280px] mx-auto">
+            <h2 className="font-[var(--font-display)] font-bold text-[clamp(1.5rem,3vw,2rem)] text-[var(--ink-primary)] mb-10">
               Related Articles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
