@@ -362,7 +362,20 @@ export const articles: Article[] = [
       'hotwire gaio.tech ai visibility products'
     ],
     commentCount: 0,
-    faq: []
+    faq: [
+      {
+        question: "How do I optimize for AI Search Engines?",
+        answer: "You should structure your site using semantic HTML, include a clean llms.txt file to serve as a markdown-based entry point, and implement JSON-LD structured data so AI crawlers can understand relationships easily."
+      },
+      {
+        question: "What is Generative Engine Optimization (GEO)?",
+        answer: "GEO is the practice of optimizing content specifically for AI search engines like Perplexity, Google AI Overviews, and ChatGPT. It focuses on clarity, authoritative sources, semantic structure, and citation readiness rather than keyword density."
+      },
+      {
+        question: "Why do AI crawlers prefer JSON-LD?",
+        answer: "JSON-LD provides a machine-readable, unambiguous schema of your content. Unlike unstructured text, JSON-LD graphs out the exact relationships between entities (like an Article, its Author, and an Organization), which helps LLMs ground their responses in factual data."
+      }
+    ]
   },
   {
     id: 7,
