@@ -216,7 +216,8 @@ export default function HomeClient() {
             <div className="lg:col-span-3">
               {mustReadArticles[0] && (
                 <article className="group relative overflow-hidden h-full" style={{ borderRadius: 'var(--radius-lg)', minHeight: '420px' }}>
-                  <a href={`/blog/${mustReadArticles[0].slug}`}>
+                  <a href={`/blog/${mustReadArticles[0].slug}`} aria-label={`Read ${mustReadArticles[0].title}`}>
+                    <span className="sr-only">{mustReadArticles[0].title}</span>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={mustReadArticles[0].image}

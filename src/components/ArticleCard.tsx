@@ -29,7 +29,8 @@ function DefaultCard({ article }: { article: Article }) {
   return (
     <article className="group flex flex-col h-full">
       {/* Image */}
-      <Link href={`/blog/${article.slug}`} className="block relative overflow-hidden mb-4" style={{ borderRadius: 'var(--radius-md)', aspectRatio: '16/10' }}>
+      <Link href={`/blog/${article.slug}`} className="block relative overflow-hidden mb-4" style={{ borderRadius: 'var(--radius-md)', aspectRatio: '16/10' }} aria-label={`Read ${article.title}`}>
+        <span className="sr-only">{article.title}</span>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={article.image}
@@ -130,6 +131,7 @@ function DefaultCard({ article }: { article: Article }) {
             color: '#fff',
           }}
         >
+          <span className="sr-only">Read {article.title}</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
           </svg>
@@ -206,7 +208,8 @@ function FeaturedCard({ article }: { article: Article }) {
 
       {/* Right — Image */}
       <div className="order-1 lg:order-2 relative overflow-hidden" style={{ borderRadius: 'var(--radius-lg)', aspectRatio: '4/3' }}>
-        <Link href={`/blog/${article.slug}`}>
+        <Link href={`/blog/${article.slug}`} aria-label={`Read ${article.title}`}>
+          <span className="sr-only">{article.title}</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={article.image}
@@ -232,7 +235,8 @@ function FeaturedCard({ article }: { article: Article }) {
 function HorizontalCard({ article }: { article: Article }) {
   return (
     <article className="group flex gap-4 items-start">
-      <Link href={`/blog/${article.slug}`} className="flex-shrink-0 relative overflow-hidden" style={{ width: '120px', height: '90px', borderRadius: 'var(--radius-sm)' }}>
+      <Link href={`/blog/${article.slug}`} className="flex-shrink-0 relative overflow-hidden" style={{ width: '120px', height: '90px', borderRadius: 'var(--radius-sm)' }} aria-label={`Read ${article.title}`}>
+        <span className="sr-only">{article.title}</span>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={article.image} alt={article.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
       </Link>
@@ -260,7 +264,8 @@ function HorizontalCard({ article }: { article: Article }) {
 function CompactCard({ article }: { article: Article }) {
   return (
     <article className="group flex flex-col">
-      <Link href={`/blog/${article.slug}`} className="block relative overflow-hidden mb-3" style={{ borderRadius: 'var(--radius-sm)', aspectRatio: '16/9' }}>
+      <Link href={`/blog/${article.slug}`} className="block relative overflow-hidden mb-3" style={{ borderRadius: 'var(--radius-sm)', aspectRatio: '16/9' }} aria-label={`Read ${article.title}`}>
+        <span className="sr-only">{article.title}</span>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={article.image} alt={article.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
       </Link>
