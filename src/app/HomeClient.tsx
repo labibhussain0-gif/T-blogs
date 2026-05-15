@@ -387,13 +387,14 @@ export default function HomeClient() {
               gap: '24px',
               overflowX: 'auto',
               paddingBottom: '8px',
+              paddingRight: '24px',
             }}
           >
             {weeklyHighlights.map((article) => (
               <div
                 key={article.id}
                 style={{
-                  minWidth: '300px',
+                  minWidth: '280px',
                   maxWidth: '320px',
                   flexShrink: 0,
                 }}
