@@ -41,16 +41,7 @@ export default function HomeClient() {
         }}
       >
         {/* Category Label */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '16px',
-            marginBottom: '32px',
-            paddingBottom: '16px',
-            borderBottom: '1px solid var(--border-light)',
-          }}
-        >
+        <div className="flex flex-wrap items-center gap-4 mb-8 pb-4 border-b border-[var(--border-light)]">
           <span
             style={{
               fontFamily: 'var(--font-display)',
@@ -64,7 +55,7 @@ export default function HomeClient() {
           >
             Tech.
           </span>
-          <div style={{ display: 'flex', gap: '8px', marginLeft: 'auto' }}>
+          <div className="flex flex-wrap gap-2 mt-4 sm:mt-0 sm:ml-auto">
             {['Popular in AI', 'By Topic', 'Trending'].map((tab) => (
               <span
                 key={tab}
