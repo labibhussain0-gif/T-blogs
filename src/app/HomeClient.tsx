@@ -167,7 +167,7 @@ export default function HomeClient() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
           {/* Section Header */}
           <div
-            className="flex items-center justify-between"
+            className="flex flex-col sm:flex-row sm:items-center justify-between gap-4"
             style={{ marginBottom: '40px' }}
           >
             <h2
@@ -306,7 +306,7 @@ export default function HomeClient() {
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
           {/* Section Header */}
-          <div className="flex items-center justify-between" style={{ marginBottom: '40px' }}>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4" style={{ marginBottom: '40px' }}>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
