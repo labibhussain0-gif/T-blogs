@@ -77,7 +77,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className="min-h-full flex flex-col antialiased"
+        className="min-h-full flex flex-col antialiased overflow-x-hidden"
         style={{ background: "var(--bg-cream)", color: "var(--ink-primary)" }}
       >
         <Header />
