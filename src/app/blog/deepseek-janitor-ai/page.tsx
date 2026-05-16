@@ -12,6 +12,22 @@ export const metadata: Metadata = {
   title: `How to Set Up DeepSeek on Janitor AI | Technical Guide | ${SITE_NAME}`,
   description: `A definitive technical guide to running DeepSeek's open-weights models through Janitor AI.`,
   alternates: { canonical: `${SITE_URL}/blog/deepseek-janitor-ai` },
+  openGraph: {
+    title: 'How to Set Up DeepSeek on Janitor AI | Technical Guide',
+    description: "A definitive technical guide to running DeepSeek's open-weights models through Janitor AI.",
+    url: `${SITE_URL}/blog/deepseek-janitor-ai`,
+    type: 'article',
+    publishedTime: '2026-05-06T00:00:00.000Z',
+    authors: ['Ashique Hussain'],
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop',
+        width: 1200,
+        height: 630,
+        alt: 'Abstract technology representation for DeepSeek and Janitor AI',
+      }
+    ]
+  }
 };
 
 export default function DeepSeekJanitorAIGuide() {
@@ -164,7 +180,7 @@ export default function DeepSeekJanitorAIGuide() {
         <div className="prose-editorial" style={{ fontSize: '17px', lineHeight: 1.8, color: 'var(--ink-secondary)' }}>
 
           <p style={{ fontSize: '19px', lineHeight: 1.7, marginBottom: '32px', color: 'var(--ink-primary)', fontWeight: 400 }}>
-            You are tired of mainstream LLM APIs silently restricting your outputs or billing you like you are running a small nation-state. You want to know <strong>how to set up DeepSeek on Janitor AI</strong>. It is a solid architectural choice: cheaper, highly capable, and unrestricted. But connecting a raw API to a third-party client is not always plug-and-play. Let us break this down into components.
+            You are tired of mainstream LLM APIs silently restricting your outputs, breaking character immersion, or billing you like you are running a small nation-state. You want to know <strong>how to set up DeepSeek on Janitor AI</strong>. For unrestricted roleplay, deep character memory, and immersive storytelling, DeepSeek is a solid architectural choice: cheaper, highly capable, and fiercely uncensored. But connecting a raw API to a third-party client is not always plug-and-play. Let us break this down into components.
           </p>
 
           <YouTubeEmbed videoId="eXS0VmqDnkM" title="How To Use Janitor AI With DeepSeek In 2 Minutes!" />
@@ -209,6 +225,16 @@ export default function DeepSeekJanitorAIGuide() {
           </div>
 
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
+            Prerequisites: The $2 Minimum Balance Rule
+          </h2>
+          <p>
+            Before we touch a single API key, we need to address the most common failure state. DeepSeek operates on a prepaid billing model. If you generate a key on a completely empty account ($0 balance), the API will fail silently. Janitor AI will just spin, or return blank responses.
+          </p>
+          <p>
+            To avoid this, you must add at least <strong>$2 to your DeepSeek account</strong>. It is a tiny threshold, but it acts as an anti-abuse measure on their end. Go to the billing dashboard, drop in the minimum top-up, and your API keys will immediately activate for external routing.
+          </p>
+
+          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
             Step 1: Procuring the DeepSeek API Key
           </h2>
           <p>
@@ -227,17 +253,17 @@ export default function DeepSeekJanitorAIGuide() {
 
           <ul style={{ margin: '24px 0', paddingLeft: '24px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <li>
-              <strong style={{ color: 'var(--ink-primary)' }}>API Base URL:</strong> <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875em', background: 'var(--bg-warm-gray)', padding: '2px 8px', borderRadius: '4px' }}>https://api.deepseek.com/v1</code>
+              <strong style={{ color: 'var(--ink-primary)' }}>API Base URL:</strong> <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875em', background: 'var(--bg-warm-gray)', padding: '2px 8px', borderRadius: '4px' }}>https://api.deepseek.com/v1</code> (Direct) or <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875em', background: 'var(--bg-warm-gray)', padding: '2px 8px', borderRadius: '4px' }}>https://openrouter.ai/api/v1</code> (OpenRouter)
               <br />
               <span style={{ fontSize: '14px', color: 'var(--ink-tertiary)', fontStyle: 'italic' }}>
-                Notice the <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875em', background: 'var(--bg-warm-gray)', padding: '2px 6px', borderRadius: '4px' }}>/v1</code>. Just one missing version tag and you get infinite loading.
+                Notice the <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875em', background: 'var(--bg-warm-gray)', padding: '2px 6px', borderRadius: '4px' }}>/v1</code>. Just one missing version tag and you get infinite loading. If using OpenRouter, use their v1 endpoint.
               </span>
             </li>
             <li>
-              <strong style={{ color: 'var(--ink-primary)' }}>API Key:</strong> Paste the exact string you generated from DeepSeek.
+              <strong style={{ color: 'var(--ink-primary)' }}>API Key:</strong> Paste the exact string you generated from DeepSeek (or OpenRouter, depending on your choice).
             </li>
             <li>
-              <strong style={{ color: 'var(--ink-primary)' }}>Model Name:</strong> <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875em', background: 'var(--bg-warm-gray)', padding: '2px 8px', borderRadius: '4px' }}>deepseek-chat</code> or <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875em', background: 'var(--bg-warm-gray)', padding: '2px 8px', borderRadius: '4px' }}>deepseek-coder</code>
+              <strong style={{ color: 'var(--ink-primary)' }}>Model Name:</strong> <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875em', background: 'var(--bg-warm-gray)', padding: '2px 8px', borderRadius: '4px' }}>deepseek-chat</code> (for Direct API) or <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875em', background: 'var(--bg-warm-gray)', padding: '2px 8px', borderRadius: '4px' }}>deepseek/deepseek-chat</code> (for OpenRouter)
             </li>
           </ul>
 
@@ -268,22 +294,52 @@ export default function DeepSeekJanitorAIGuide() {
           </div>
 
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
+            DeepSeek Direct vs. OpenRouter: Which is Better?
+          </h2>
+          <p>
+            You have two main paths to pipe DeepSeek into Janitor AI: the direct DeepSeek API, or an aggregator like <strong>OpenRouter</strong>. For normal users, OpenRouter is the standard alternative to direct integration.
+          </p>
+          <p>
+            The direct API is cheaper if you use it heavily, but you might face geographic routing issues or rate limits during peak Chinese timezone hours. OpenRouter sits in the middle. You pay a slight markup, but OpenRouter handles the failovers, accepts standard US/EU credit cards more easily, and provides a unified dashboard for all your LLM spending. If you want the path of least resistance for immersive storytelling, OpenRouter is excellent.
+          </p>
+
+          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
+            Choosing the Right Model: DeepSeek V3 vs. R1 (Reasoner)
+          </h2>
+          <p>
+            DeepSeek recently introduced <strong>DeepSeek R1 (Reasoner)</strong>, which uses chain-of-thought processing to "think" before it speaks. While incredible for coding or math, <strong>do not use R1 for roleplay in Janitor AI.</strong>
+          </p>
+          <p>
+            R1 outputs raw <code>&lt;think&gt;...&lt;/think&gt;</code> tags containing its internal monologue. Janitor AI’s frontend currently struggles to parse or hide these tags cleanly, which immediately breaks immersion during a character interaction. For seamless roleplay and character interactions, always stick to <strong>DeepSeek V3</strong> (<code>deepseek-chat</code>). It remains lightning fast, uncensored, and parses perfectly in Janitor’s interface.
+          </p>
+
+          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
             Step 3: Tuning the Hyperparameters
           </h2>
           <p>
             DeepSeek is not Claude or GPT-4. If you leave the default hyperparameters untouched, it might start producing output that resembles a junior dev explaining their latest spaghetti code.
           </p>
           <ul style={{ margin: '24px 0', paddingLeft: '24px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <li><strong style={{ color: 'var(--ink-primary)' }}>Temperature (0.7 - 0.85):</strong> Start at 0.7. If the model feels too rigid, bump it up.</li>
-            <li><strong style={{ color: 'var(--ink-primary)' }}>Top-P (0.9):</strong> Controls diversity. Leave this at 0.9.</li>
-            <li><strong style={{ color: 'var(--ink-primary)' }}>Max Tokens (2048 - 4096):</strong> Set this high enough so responses do not abruptly cut off mid-sentence.</li>
+            <li><strong style={{ color: 'var(--ink-primary)' }}>Temperature (0.7 - 0.85):</strong> Start at 0.7. If the character model feels too rigid or repetitive in its storytelling, bump it up.</li>
+            <li><strong style={{ color: 'var(--ink-primary)' }}>Top-P (0.9):</strong> Controls diversity of the prose. Leave this at 0.9.</li>
+            <li><strong style={{ color: 'var(--ink-primary)' }}>Max Tokens (2048 - 4096):</strong> Set this high enough so long character responses do not abruptly cut off mid-sentence.</li>
           </ul>
 
+          <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.25rem', color: 'var(--ink-primary)', marginTop: '32px', marginBottom: '16px' }}>
+            Taking Advantage of the 128K Context Window
+          </h3>
+          <p>
+            One of the biggest advantages of DeepSeek V3 is its massive 128K context window. In roleplay terms, this means the character can "remember" events that happened dozens of chapters ago without you needing to summarize them in the chat memory manually.
+          </p>
+          <p>
+            In Janitor AI’s Generation Settings, you can safely slide the Context Size up to 64,000 or even 100,000 if your API balance can handle the token ingestion costs. Be warned: sending 100K tokens per message gets expensive fast, even at DeepSeek's rock-bottom pricing. A sweet spot for deep memory without bankrupting yourself is typically around 32,000 tokens.
+          </p>
+
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
-            Advanced Architecture: The LiteLLM Proxy
+            Advanced Architecture: The LiteLLM Proxy (For Power Users)
           </h2>
           <p>
-            If you are running this setup daily, connecting Janitor AI directly to DeepSeek is amateur hour. You are one API outage away from a dead session. The adult in the room for model orchestration is <strong style={{ color: 'var(--ink-primary)' }}>LiteLLM</strong>. 
+            If you are running this setup daily and want ultimate control, connecting Janitor AI directly to DeepSeek or even OpenRouter might feel limiting. You are one API outage away from a dead roleplay session. The adult in the room for model orchestration for power users is <strong style={{ color: 'var(--ink-primary)' }}>LiteLLM</strong>. 
           </p>
           <p>
             By running a local LiteLLM proxy, you point Janitor AI to <code style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875em', background: 'var(--bg-warm-gray)', padding: '2px 8px', borderRadius: '4px' }}>http://localhost:4000</code>. LiteLLM handles the routing. I remember a specific Friday night where a major API provider went down, but my LiteLLM router automatically failed over to a local Llama3 instance. The client never noticed the drop. That is the kind of resilience you want.
@@ -356,7 +412,7 @@ router_settings:
             Boring technology is usually the right choice for production, and setting up a clean API pipeline should not be overly complex. Once configured correctly, DeepSeek on Janitor AI provides a robust, highly capable backend at a fraction of the cost of mainstream alternatives. 
           </p>
           <p>
-            Now stop over-engineering the prompt settings and get back to your workflows.
+            Now stop over-engineering the prompt settings and get back to your immersive storytelling.
           </p>
         </div>
       </div>

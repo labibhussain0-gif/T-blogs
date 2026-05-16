@@ -60,7 +60,7 @@ export const articles: Article[] = [
     category: 'AI Research',
     date: 'May 6, 2026',
     lastUpdated: 'May 6, 2026',
-    readTime: '8 min',
+    readTime: '14 min',
     author: AUTHOR.name,
     authorBio: AUTHOR.bio,
     authorAvatar: AUTHOR.avatar,
@@ -92,17 +92,22 @@ export const articles: Article[] = [
       {
         question: 'Why is Janitor AI showing infinite loading after I set up DeepSeek?',
         answer:
-          'The most common cause is an incorrect base URL. Make sure you are using https://api.deepseek.com/v1 with the version path included. Also verify your API key has not expired and your DeepSeek account has available credits.',
+          'The most common cause is an incorrect base URL. Make sure you are using https://api.deepseek.com/v1 with the version path included. Another frequent issue is a $0 account balance; DeepSeek requires at least $2 in credits to activate your API keys.',
       },
       {
-        question: 'Which DeepSeek model should I use on Janitor AI?',
+        question: 'Should I use DeepSeek Direct or OpenRouter for Janitor AI?',
         answer:
-          'Use deepseek-chat for general conversation and creative writing, or deepseek-coder if you need code-focused responses. Both are OpenAI-compatible and work with Janitor AI\'s custom API setting.',
+          'OpenRouter is the standard, easiest alternative for normal users. It handles geographic routing issues, accepts standard credit cards more easily, and provides failovers. Direct DeepSeek API is cheaper but requires prepaying and can suffer from rate limits during peak hours.',
+      },
+      {
+        question: 'Which DeepSeek model should I use on Janitor AI: V3 or R1?',
+        answer:
+          'Always use DeepSeek V3 (deepseek-chat) for Janitor AI roleplay. DeepSeek R1 (Reasoner) outputs raw <think> tags containing its internal monologue, which breaks character immersion and does not parse cleanly in Janitor’s interface.',
       },
       {
         question: 'Is DeepSeek free to use on Janitor AI?',
         answer:
-          'DeepSeek is not free, but it is significantly cheaper than GPT-4. You pay per token through the DeepSeek platform. Create an account at platform.deepseek.com to see current pricing and add credits.',
+          'DeepSeek is not free, but it is significantly cheaper than GPT-4. You pay per token through the DeepSeek platform or OpenRouter. You must have a positive balance (at least $2 minimum) to generate a working API key.',
       },
       {
         question: 'What temperature and token settings work best for DeepSeek on Janitor AI?',
@@ -155,6 +160,11 @@ export const articles: Article[] = [
         question: 'When does the EU AI Act take effect?',
         answer:
           'The EU AI Act entered into force in August 2024. The prohibited AI systems rules applied from February 2025. High-risk AI system obligations apply from August 2026. Most developers need to be compliant by August 2027.',
+      },
+      {
+        question: 'What is the penalty for non-compliance with the EU AI Act?',
+        answer:
+          'Penalties for non-compliance are severe. Fines can reach up to €35 million or 7% of a company\'s total worldwide annual turnover for the preceding financial year, whichever is higher, for violations involving prohibited AI practices.',
       },
       {
         question: 'Does the EU AI Act apply to companies outside the EU?',
@@ -223,6 +233,16 @@ export const articles: Article[] = [
         answer:
           'Entry-level roles often do not require heavy coding. Mid-to-senior roles — penetration testing, malware analysis, security engineering — benefit significantly from Python, Bash, and an understanding of how software is built.',
       },
+      {
+        question: 'What is the role of an AI Threat Analyst?',
+        answer:
+          'An AI Threat Analyst is a specialized role focused on red-teaming internal AI deployments. They deliberately attempt to break model safety constraints, identify vulnerabilities like Prompt Injection or Data Poisoning, and secure the machine learning lifecycle against adversarial attacks.'
+      },
+      {
+        question: 'Can AI handle Zero-Day Vulnerabilities?',
+        answer:
+          'Currently, AI struggles with Zero-Day Vulnerabilities. Because machine learning models rely on historical data and known threat signatures, they often fail to recognize completely novel attack patterns. This is why human incident responders remain critical for zero-day mitigation.'
+      },
     ],
   },
 
@@ -263,22 +283,17 @@ export const articles: Article[] = [
       {
         question: 'Is virtual reality bad for your eyes?',
         answer:
-          'Short-term VR use (under 30 minutes) causes temporary eye strain in some users, but no permanent damage has been established in healthy adults. Children under 12 are advised to limit use due to ongoing visual system development.',
+          'According to the American Academy of Ophthalmology, there is no empirical evidence that VR use causes permanent structural vision damage in healthy adults. However, prolonged use can induce transient digital eye strain due to the unique optical mechanics of stereoscopic displays.',
       },
       {
         question: 'Can VR cause long-term vision damage?',
         answer:
-          'Current research shows no evidence of long-term vision damage in adults from normal VR use. The main concerns are temporary digital eye strain, vergence-accommodation conflict, and potential myopia progression in children.',
+          'Current clinical research indicates no evidence of long-term vision loss associated with standard VR usage. The primary physiological consequences are temporary, stemming from the vergence-accommodation conflict and a reduced blink rate, which resolve with adequate rest.',
       },
       {
         question: 'How long should you use VR without a break?',
         answer:
-          'Most manufacturers and ophthalmologists recommend taking a 10–15 minute break after every 30 minutes of VR use. The 20-20-20 rule applies: every 20 minutes, look at something 20 feet away for 20 seconds.',
-      },
-      {
-        question: 'Is VR safe for children?',
-        answer:
-          'Most headset manufacturers set minimum age recommendations of 12–13 years. Children\'s visual systems are still developing, and the vergence-accommodation conflict in VR headsets may affect that development. Limit sessions to 20 minutes or less.',
+          'Ophthalmologists strongly recommend limiting continuous VR exposure to 30 to 45 minutes. Users should rigorously apply the 20-20-20 rule—looking at a target 20 feet away for 20 seconds every 20 minutes—to allow the ciliary muscles to relax.',
       },
     ],
   },
@@ -337,6 +352,18 @@ export const articles: Article[] = [
         answer:
           'Key limitations include: the blockchain only records what you submit (garbage in, garbage out), cross-border legal recognition is inconsistent, smart contract enforcement requires the infringing platform to participate, and blockchain records are still not accepted as primary evidence in all jurisdictions.',
       },
+      {
+        question: 'Are NFTs considered intellectual property?',
+        answer: 'No. An NFT is just a receipt on a distributed database. Owning a digital receipt pointing to a URL does not automatically grant you the underlying copyright or trademark to the image or asset it points to, unless explicitly transferred via a legally binding contract.'
+      },
+      {
+        question: 'Is blockchain recognized by WIPO?',
+        answer: 'The World Intellectual Property Organization (WIPO) acknowledges blockchain as a technological tool that can generate evidence of existence (timestamping) and aid in supply chain tracing. However, WIPO does not consider blockchain a replacement for formal, sovereign IP registration frameworks.'
+      },
+      {
+        question: 'What is the difference between blockchain registration and a formal patent?',
+        answer: 'Blockchain registration merely proves you possessed a specific document or dataset at a specific time (creating prior art). A formal patent grants you a government-enforced legal monopoly to exclude others from making, using, or selling your invention.'
+      }
     ],
   },
   {
@@ -374,6 +401,14 @@ export const articles: Article[] = [
       {
         question: "Why do AI crawlers prefer JSON-LD?",
         answer: "JSON-LD provides a machine-readable, unambiguous schema of your content. Unlike unstructured text, JSON-LD graphs out the exact relationships between entities (like an Article, its Author, and an Organization), which helps LLMs ground their responses in factual data."
+      },
+      {
+        question: "How do I track brand mentions in ChatGPT?",
+        answer: "Tracking brand mentions in ChatGPT requires taking automated LLM snapshots using tools like Puppeteer or Python to scrape and archive responses to specific brand queries over time, as there is currently no Google Search Console equivalent for ChatGPT."
+      },
+      {
+        question: "What is the difference between GEO and AEO?",
+        answer: "GEO (Generative Engine Optimization) focuses on structuring an entire domain to be consumed by AI models, encompassing technical formatting like semantic HTML and llms.txt. AEO (Answer Engine Optimization) is a subset of GEO focused specifically on providing concise, direct answers to factual queries to win zero-click snippets."
       }
     ]
   },
