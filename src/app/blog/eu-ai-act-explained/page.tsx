@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { SITE_NAME, SITE_URL } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata: Metadata = {
   title: `EU AI Act Explained: What Developers Need to Know in 2026 | ${SITE_NAME}`,
@@ -76,6 +77,9 @@ export default function EuAiActExplained() {
           <p style={{ fontSize: '19px', lineHeight: 1.7, marginBottom: '32px', color: 'var(--ink-primary)', fontWeight: 400 }}>
             The EU AI Act is no longer a draft floating around Brussels. It is law. If your data leaves your network to get an answer, or if you serve EU citizens, you are now operating under a new set of constraints. You do not need a 40-page legal brief; you need to know how this impacts your architecture and deployment pipelines. Let us cut through the noise.
           </p>
+
+          <YouTubeEmbed videoId="s_rxOnCt3HQ" title="The EU's AI Act Explained" />
+
 
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
             The Risk-Based Tier System

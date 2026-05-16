@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { SITE_NAME, SITE_URL, generateArticleSchema } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata: Metadata = {
   title: `Sector Software Architecture: AI Integration in HR, Legal, and Real Estate Tech | ${SITE_NAME}`,
@@ -88,6 +89,9 @@ export default function SectorArchitecturePost() {
             <p className="text-xl font-medium text-gray-600 mb-8 leading-relaxed">
               Legacy monolithic architectures are buckling under the demands of modern artificial intelligence. From searching case law to parsing thousands of resumes, traditional SQL databases and keyword searches can no longer deliver the contextual results users expect.
             </p>
+
+          <YouTubeEmbed videoId="9TVc32M_gIY" title="What is Enterprise Architecture (EA) and why is it important?" />
+
 
             <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-900">The Database Migration in HR Tech</h2>
             <p>

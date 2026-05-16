@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { SITE_NAME, SITE_URL } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata: Metadata = {
   title: `How to Set Up DeepSeek on Janitor AI | Technical Guide | ${SITE_NAME}`,
@@ -151,6 +152,9 @@ export default function DeepSeekJanitorAIGuide() {
           <p style={{ fontSize: '19px', lineHeight: 1.7, marginBottom: '32px', color: 'var(--ink-primary)', fontWeight: 400 }}>
             You are tired of mainstream LLM APIs silently restricting your outputs or billing you like you are running a small nation-state. You want to know <strong>how to set up DeepSeek on Janitor AI</strong>. It is a solid architectural choice: cheaper, highly capable, and unrestricted. But connecting a raw API to a third-party client is not always plug-and-play. Let us break this down into components.
           </p>
+
+          <YouTubeEmbed videoId="eXS0VmqDnkM" title="How To Use Janitor AI With DeepSeek In 2 Minutes!" />
+
 
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
             The Architecture: What Is Actually Happening?

@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import { SITE_NAME, SITE_URL, generateArticleSchema } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata: Metadata = {
   title: `Next-Gen Rendering: What Is New in Gaming Technology and HCI | ${SITE_NAME}`,
@@ -93,6 +94,9 @@ export default function GamingTechPost() {
           <p>
             The video game industry is undergoing a systemic architectural shift. If you want to know <strong>what is new in gaming technology</strong> according to leading platforms like jogametech, you need to look beyond raw teraflops and focus on the rendering pipeline itself. The days of baking lighting into static textures are over. Next-gen rendering is defined by real-time path tracing, neural upscaling, and dynamic geometry.
           </p>
+
+          <YouTubeEmbed videoId="8e8v-AsKWok" title="Beyond the Screen: The Future of Human-Computer Interaction and Augmented Reality" />
+
 
           <h2 className="mt-12 mb-5 font-bold text-[var(--ink-primary)] text-2xl font-[var(--font-display)]">The Neural Rendering Revolution</h2>
           <p>

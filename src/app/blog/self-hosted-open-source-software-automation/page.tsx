@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { SITE_NAME, SITE_URL, generateArticleSchema } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata: Metadata = {
   title: `The Shift to Self-Hosted: Open Source Alternatives and Software Automation | ${SITE_NAME}`,
@@ -150,6 +151,9 @@ export default function EnterpriseAutomationPost() {
           <p style={{ fontSize: '19px', lineHeight: 1.7, marginBottom: '32px', color: 'var(--ink-primary)', fontWeight: 400 }}>
             Enterprise architecture is undergoing a quiet but massive counter-revolution. After a decade of pushing everything to managed SaaS solutions, technical teams are pulling mission-critical infrastructure back in-house. They are discovering that to achieve true automation, you cannot afford to be rate-limited by vendor API quotas or pay per-seat licenses for background workers. The future of the enterprise is increasingly self-hosted.
           </p>
+
+          <YouTubeEmbed videoId="UGT0wVMkxV8" title="Automate Everything with n8n — Self-Hosted, Secure, and Free" />
+
 
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
             What Is Software Automation?

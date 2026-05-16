@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { SITE_NAME, SITE_URL } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata: Metadata = {
   title: `Will Cybersecurity Be Replaced by AI? The Honest Answer | ${SITE_NAME}`,
@@ -76,6 +77,9 @@ export default function CybersecurityReplaced() {
           <p style={{ fontSize: '19px', lineHeight: 1.7, marginBottom: '32px', color: 'var(--ink-primary)', fontWeight: 400 }}>
             Every week there is a new headline claiming AI is going to eradicate the cybersecurity engineering profession. It is a fantastic narrative for VCs selling AI security tools. But if you actually manage infrastructure, you know the truth: AI is a powerful parser, but an incredibly naive architect. Let us cut the marketing speak and look at the reality.
           </p>
+
+          <YouTubeEmbed videoId="3sSDQ_wLSzM" title="Is AI Saving or Taking Jobs? Cybersecurity & Automation Impact" />
+
 
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
             The Parser vs. The Architect

@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { SITE_NAME, SITE_URL, generateArticleSchema } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata: Metadata = {
   title: `Architecting for LLMs: How to Improve Brand Visibility in AI Search Engines | ${SITE_NAME}`,
@@ -70,6 +71,9 @@ export default function AISearchVisibilityPost() {
         </div>
         <div className="prose-editorial" style={{ fontSize: '17px', lineHeight: 1.8, color: 'var(--ink-secondary)' }}>
           <p>Traditional SEO is dead. If you want to know how to improve brand visibility in AI search engines like Perplexity or Google AI Overviews, you need Generative Engine Optimization (GEO). This is a technical breakdown of formatting data for LLM crawlers using semantic HTML and JSON-LD.</p>
+
+          <YouTubeEmbed videoId="U4vTNI6xaS8" title="How To Track and Improve Your Brand's Visibility in LLMs" />
+
           
           <h2 style={{ marginTop: '48px', marginBottom: '20px', fontWeight: 700, color: 'var(--ink-primary)', fontSize: '1.75rem' }}>Semantic HTML: Building for the Machine Reader</h2>
           <p>AI models process context through structure. When a crawler parses your site, it relies on semantic tags&mdash;like <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, and hierarchical heading tags&mdash;to weigh the importance of content. Using a <code>&lt;div&gt;</code> for a heading strips away the semantic value that an LLM uses to classify information. By establishing a rigorous DOM hierarchy, you ensure that the AI inherently understands the relationships between your paragraphs, lists, and core arguments.</p>

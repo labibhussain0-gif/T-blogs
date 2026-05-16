@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { SITE_NAME, SITE_URL } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata: Metadata = {
   title: `Blockchain in Intellectual Property: A Practical Overview | ${SITE_NAME}`,
@@ -76,6 +77,9 @@ export default function BlockchainIP() {
           <p style={{ fontSize: '19px', lineHeight: 1.7, marginBottom: '32px', color: 'var(--ink-primary)', fontWeight: 400 }}>
             Blockchain in intellectual property is suffering from a massive case of marketing hype. A distributed ledger is not a magical shield that stops someone from right-clicking your image or stealing your codebase. It is simply an immutable, timestamped database. Let&apos;s look at what it actually solves.
           </p>
+
+          <YouTubeEmbed videoId="pA19Tf5wFEA" title="Blockchain: The Future of Intellectual Property Protection" />
+
 
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
             The "Proof of Existence" Problem

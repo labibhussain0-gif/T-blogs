@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { SITE_NAME, SITE_URL, generateArticleSchema } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata: Metadata = {
   title: `From Kaggle to Production: Applied Machine Learning in Healthcare | ${SITE_NAME}`,
@@ -103,6 +104,9 @@ export default function MachineLearningHealthcarePost() {
           <p className="text-[19px] leading-[1.7] mb-8 text-[var(--ink-primary)] font-normal">
             When a data scientist first encounters <strong>hypertension prediction using machine learning Kaggle</strong> competitions, they are presented with a utopia. The dataset is a neatly organized CSV file. Missing values might exist, but they are localized. The target variable is perfectly labeled. You can split the data, run XGBoost, and achieve an AUC-ROC of 0.89. The leaderboard turns green.
           </p>
+
+          <YouTubeEmbed videoId="UZEstizNxkg" title="Building AI models for healthcare" />
+
           <p>
             Then you get hired to build the real thing in a hospital system. Suddenly, the pristine CSV vanishes, replaced by a labyrinth of unstandardized HL7 streams, unstructured clinical notes, and missing lab results. Welcome to applied machine learning in healthcare.
           </p>

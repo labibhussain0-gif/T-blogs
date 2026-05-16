@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { SITE_NAME, SITE_URL } from '@/lib/seo-helpers';
 import ShareButton from '../ShareButton';
 import { getRelatedArticles, getArticleBySlug } from '@/data/articles';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export const metadata: Metadata = {
   title: `Is Virtual Reality Bad for Your Eyes? What the Research Says | ${SITE_NAME}`,
@@ -76,6 +77,9 @@ export default function VirtualRealityEyes() {
           <p style={{ fontSize: '19px', lineHeight: 1.7, marginBottom: '32px', color: 'var(--ink-primary)', fontWeight: 400 }}>
             Is virtual reality destroying your retinas? Short answer: No, but it&apos;s confusing your brain. The hardware isn&apos;t frying your eyeballs with radiation; it&apos;s exposing an architectural quirk in how human vision works. Let&apos;s put the sensationalism aside and look at the actual optical mechanics.
           </p>
+
+          <YouTubeEmbed videoId="zR0y0LTmzT0" title="Oculus Quest 2 - Will VR Damage Your Eyes? 4 Dangers You NEED To Know!" />
+
 
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
             The Vergence-Accommodation Conflict
