@@ -47,7 +47,24 @@ export default function AISearchVisibilityPost() {
 
   return (
     <article style={{ background: 'var(--bg-cream)', minHeight: '100vh', fontFamily: 'var(--font-body)' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://tblogs.site/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://tblogs.site/blog" },
+              { "@type": "ListItem", position: 3, name: article?.title, item: `https://tblogs.site/blog/${article?.slug}` }
+            ]
+          })
+        }}
+      />
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 24px 80px' }}>
         <nav style={{ marginBottom: '32px', fontSize: '14px', fontWeight: 500, color: 'var(--ink-tertiary)' }}>
           <Link href="/blog" className="hover:text-[var(--accent-orange)] transition-colors duration-200">← Back to Blog</Link>

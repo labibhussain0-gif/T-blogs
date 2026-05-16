@@ -45,7 +45,24 @@ export default function GamingTechPost() {
 
   return (
     <article className="min-h-screen bg-[var(--bg-cream)] font-[var(--font-body)]">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://tblogs.site/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://tblogs.site/blog" },
+              { "@type": "ListItem", position: 3, name: article?.title, item: `https://tblogs.site/blog/${article?.slug}` }
+            ]
+          })
+        }}
+      />
       
       <div className="max-w-[800px] mx-auto px-6 pt-12 pb-20">
         <nav className="mb-8 text-sm font-medium text-[var(--ink-tertiary)]">
