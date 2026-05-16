@@ -1,11 +1,12 @@
 import { MetadataRoute } from 'next'
+import { articles } from '@/data/articles'
 
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://tblogs.site';
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/`,
       lastModified: new Date(),
@@ -48,35 +49,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
-    {
-      url: `${baseUrl}/blog/deepseek-janitor-ai`,
-      lastModified: new Date('2026-05-06T00:00:00.000Z'),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog/eu-ai-act-explained`,
-      lastModified: new Date('2026-05-04T00:00:00.000Z'),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog/will-cybersecurity-be-replaced-by-ai`,
-      lastModified: new Date('2026-05-01T00:00:00.000Z'),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog/is-virtual-reality-bad-for-your-eyes`,
-      lastModified: new Date('2026-04-28T00:00:00.000Z'),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog/blockchain-intellectual-property`,
-      lastModified: new Date('2026-04-25T00:00:00.000Z'),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-  ]
+  ];
+
+  const articleRoutes: MetadataRoute.Sitemap = articles.map((article) => ({
+    url: `${baseUrl}/blog/${article.slug}`,
+    lastModified: new Date(article.lastUpdated || article.date),
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  }));
+
+  return [...staticRoutes, ...articleRoutes];
 }
