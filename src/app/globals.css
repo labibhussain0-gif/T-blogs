@@ -69,6 +69,14 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* ===== Global Mobile Overflow Safety ===== */
+img, video, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ===== Typography ===== */
@@ -121,6 +129,12 @@ p {
 }
 
 /* ===== Prose overrides for blog posts ===== */
+.prose-editorial {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 .prose-editorial h2 {
   font-family: var(--font-display);
   font-weight: 700;
@@ -148,6 +162,8 @@ p {
   padding: 0.125em 0.375em;
   border-radius: var(--radius-sm);
   color: var(--ink-primary);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .prose-editorial pre {

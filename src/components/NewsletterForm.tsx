@@ -43,7 +43,7 @@ export default function NewsletterForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="flex w-full max-w-md">
+      <form onSubmit={handleSubmit} className="flex w-full max-w-md" style={{ overflow: 'hidden' }}>
         <div className="relative flex-1">
           <input
             type="email"

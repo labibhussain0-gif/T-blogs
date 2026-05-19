@@ -85,12 +85,7 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav
             aria-label="Main Navigation"
-            className="hidden md:flex"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-            }}
+            className="hidden md:flex items-center gap-2"
           >
             <NavLink href="/" label="Home" />
 

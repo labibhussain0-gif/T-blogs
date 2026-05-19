@@ -77,7 +77,7 @@ export default function SectorArchitecturePost() {
             </span>
             <span className="text-white/80 text-sm">{article.date}</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-[var(--font-heading)]">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-[var(--font-display)]">
             {article.title}
           </h1>
           <div className="flex items-center gap-4">
@@ -99,7 +99,7 @@ export default function SectorArchitecturePost() {
       <main className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Main Content */}
         <div className="lg:col-span-8">
-          <div className="prose prose-lg max-w-none text-gray-800 prose-headings:font-[var(--font-heading)] prose-a:text-red-600 hover:prose-a:text-red-700">
+          <div className="prose prose-lg max-w-none text-gray-800 prose-headings:font-[var(--font-display)] prose-a:text-[var(--accent-orange)] hover:prose-a:text-[var(--accent-orange-hover)]">
             <p className="text-xl font-medium text-gray-600 mb-8 leading-relaxed">
               Legacy monolithic architectures are buckling under the demands of modern artificial intelligence. From searching case law to parsing thousands of resumes, traditional SQL databases and keyword searches can no longer deliver the contextual results users expect.
             </p>
@@ -151,7 +151,7 @@ export default function SectorArchitecturePost() {
 
           {/* FAQ Section */}
           <div className="mt-16 pt-12 border-t border-gray-200">
-            <h3 className="text-2xl font-bold mb-8 text-gray-900 font-[var(--font-heading)]">Frequently Asked Questions</h3>
+            <h3 className="text-2xl font-bold mb-8 text-gray-900 font-[var(--font-display)]">Frequently Asked Questions</h3>
             {article.faq && article.faq.length > 0 ? (
               <FAQSection faqs={article.faq} />
             ) : (
@@ -163,7 +163,7 @@ export default function SectorArchitecturePost() {
         {/* Sidebar */}
         <aside className="lg:col-span-4 space-y-10">
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-6 border-b border-gray-100 pb-4 font-[var(--font-heading)]">
+            <h3 className="text-lg font-bold text-gray-900 mb-6 border-b border-gray-100 pb-4 font-[var(--font-display)]">
               Share this article
             </h3>
             <div className="flex gap-4">
@@ -172,7 +172,7 @@ export default function SectorArchitecturePost() {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-6 border-b border-gray-100 pb-4 font-[var(--font-heading)]">
+            <h3 className="text-lg font-bold text-gray-900 mb-6 border-b border-gray-100 pb-4 font-[var(--font-display)]">
               About the Author
             </h3>
             <div className="flex items-center gap-4 mb-4">
@@ -210,7 +210,7 @@ export default function SectorArchitecturePost() {
       {relatedArticles.length > 0 && (
         <section className="bg-white py-16 border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-gray-900 mb-10 font-[var(--font-heading)]">Read Next</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-10 font-[var(--font-display)]">Read Next</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedArticles.map((relatedArticle) => (
                 <ArticleCard key={relatedArticle.id} article={relatedArticle} />
