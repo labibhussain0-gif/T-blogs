@@ -57,6 +57,8 @@ export default function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
       style={{
         position: 'fixed',
         inset: 0,
+        maxWidth: '100vw',
+        overflowX: 'hidden',
         zIndex: 9998,
         background: 'rgba(26, 26, 26, 0.85)',
         backdropFilter: 'blur(12px)',

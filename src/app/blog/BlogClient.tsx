@@ -5,7 +5,7 @@ import ArticleCard from '@/components/ArticleCard';
 import CategoryTabs from '@/components/CategoryTabs';
 import { getArticlesByCategory } from '@/data/articles';
 
-const filterCategories = ['All', 'AI Research', 'Engineering', 'Tech Trends', 'Design'];
+const filterCategories = ['All', 'AI Research', 'Engineering', 'Tech Trends', 'Design', 'AI Tools Guide'];
 const ARTICLES_PER_PAGE = 6;
 
 export default function BlogClient() {
@@ -26,7 +26,7 @@ export default function BlogClient() {
     return () => window.removeEventListener('popstate', syncCategoryFromUrl);
   }, []);
 
-  const filtered = getArticlesByCategory(activeCategory);
+  const filtered = getArticlesByCategory(activeCategory).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
 

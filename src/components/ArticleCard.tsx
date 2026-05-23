@@ -27,7 +27,7 @@ export default function ArticleCard({
 /* ===== Default Card ===== */
 function DefaultCard({ article }: { article: Article }) {
   return (
-    <article className="group flex flex-col h-full">
+    <article className="group flex flex-col h-full relative">
       {/* Image */}
       <Link href={`/blog/${article.slug}`} className="block relative overflow-hidden mb-4" style={{ borderRadius: 'var(--radius-md)', aspectRatio: '16/10' }} aria-label={`Read ${article.title}`}>
         <span className="sr-only">{article.title}</span>
@@ -122,7 +122,7 @@ function DefaultCard({ article }: { article: Article }) {
         <Link
           href={`/blog/${article.slug}`}
           aria-label={`Read ${article.title}`}
-          className="flex items-center justify-center transition-colors duration-300"
+          className="flex items-center justify-center transition-colors duration-300 relative"
           style={{
             width: '36px',
             height: '36px',
@@ -234,7 +234,7 @@ function FeaturedCard({ article }: { article: Article }) {
 /* ===== Horizontal Card ===== */
 function HorizontalCard({ article }: { article: Article }) {
   return (
-    <article className="group flex gap-4 items-start">
+    <article className="group flex gap-4 items-start relative">
       <Link href={`/blog/${article.slug}`} className="flex-shrink-0 relative overflow-hidden" style={{ width: '120px', height: '90px', borderRadius: 'var(--radius-sm)' }} aria-label={`Read ${article.title}`}>
         <span className="sr-only">{article.title}</span>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -263,7 +263,7 @@ function HorizontalCard({ article }: { article: Article }) {
 /* ===== Compact Card ===== */
 function CompactCard({ article }: { article: Article }) {
   return (
-    <article className="group flex flex-col">
+    <article className="group flex flex-col relative">
       <Link href={`/blog/${article.slug}`} className="block relative overflow-hidden mb-3" style={{ borderRadius: 'var(--radius-sm)', aspectRatio: '16/9' }} aria-label={`Read ${article.title}`}>
         <span className="sr-only">{article.title}</span>
         {/* eslint-disable-next-line @next/next/no-img-element */}

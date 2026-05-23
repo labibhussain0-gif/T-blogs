@@ -6,19 +6,20 @@ import CategoryTabs from '@/components/CategoryTabs';
 import NewsletterForm from '@/components/NewsletterForm';
 import { articles, getFeaturedArticle, getArticlesByCategory } from '@/data/articles';
 
-const filterCategories = ['All', 'AI Research', 'Engineering', 'Tech Trends', 'Design'];
+const filterCategories = ['All', 'AI Research', 'Engineering', 'Tech Trends', 'Design', 'AI Tools Guide'];
 
 export default function HomeClient() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [heroTab, setHeroTab] = useState('Popular in AI');
   const carouselRef = useRef<HTMLDivElement>(null);
   const latestArticlesRef = useRef<HTMLDivElement>(null);
+  const sortedArticles = [...articles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const featuredArticle = getFeaturedArticle();
-  const trendingArticle = articles.reduce((max, a) => (a.commentCount > max.commentCount ? a : max), articles[0]);
+  const trendingArticle = sortedArticles.reduce((max, a) => (a.commentCount > max.commentCount ? a : max), sortedArticles[0]);
   const heroArticle = heroTab === 'Trending' ? trendingArticle : featuredArticle;
-  const filteredArticles = getArticlesByCategory(activeCategory);
-  const mustReadArticles = articles.slice(1, 5);
-  const weeklyHighlights = articles.slice(2, 10);
+  const filteredArticles = sortedArticles.filter(a => activeCategory === 'All' || a.category === activeCategory);
+  const mustReadArticles = sortedArticles.filter(a => a.id !== featuredArticle.id).slice(0, 4);
+  const weeklyHighlights = sortedArticles.slice(0, 8);
 
   const scrollCarousel = (dir: 'left' | 'right') => {
     if (carouselRef.current) {
