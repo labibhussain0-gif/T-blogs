@@ -51,7 +51,7 @@ export default function AuthorClient() {
                 <div style={{ width: '140px', height: '140px', borderRadius: '50%', overflow: 'hidden', margin: '0 auto 24px', border: '4px solid var(--accent-orange)', position: 'relative' }}>
                   <Image src={AUTHOR.avatar} alt={`${AUTHOR.name} — Tech Writer at ${SITE_NAME}`} fill className="object-cover" priority />
                 </div>
-                <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: 'var(--ink-primary)', marginBottom: '8px', letterSpacing: '-0.02em' }}>
+                <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(1.375rem, 3vw, 1.75rem)', color: 'var(--ink-primary)', marginBottom: '8px', letterSpacing: '-0.02em' }}>
                   {AUTHOR.name}
                 </h1>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', fontWeight: 600, color: 'var(--accent-orange)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '20px' }}>
@@ -83,7 +83,7 @@ export default function AuthorClient() {
               <span style={{ display: 'inline-block', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-orange)', fontFamily: 'var(--font-body)', marginBottom: '12px' }}>
                 About the Author
               </span>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)', color: 'var(--ink-primary)', marginBottom: '24px', lineHeight: 1.15, letterSpacing: '-0.02em' }}>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'clamp(1.375rem, 3.5vw, 2.25rem)', color: 'var(--ink-primary)', marginBottom: '24px', lineHeight: 1.15, letterSpacing: '-0.02em' }}>
                 The voice behind T-blogs
               </h2>
               <div style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: 'var(--ink-secondary)', lineHeight: 1.8, marginBottom: '40px' }}>

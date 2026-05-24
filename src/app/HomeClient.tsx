@@ -46,7 +46,7 @@ export default function HomeClient() {
           <span
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
+              fontSize: 'clamp(2rem, 5vw, 4rem)',
               fontWeight: 900,
               fontStyle: 'italic',
               color: 'var(--ink-primary)',
@@ -105,7 +105,7 @@ export default function HomeClient() {
             style={{
               fontFamily: 'var(--font-display)',
               fontWeight: 700,
-              fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+              fontSize: 'clamp(1.375rem, 3vw, 2rem)',
               color: 'var(--ink-primary)',
               margin: 0,
             }}
@@ -175,7 +175,7 @@ export default function HomeClient() {
               style={{
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+                fontSize: 'clamp(1.375rem, 3vw, 2rem)',
                 color: 'var(--ink-primary)',
                 margin: 0,
               }}
@@ -253,7 +253,7 @@ export default function HomeClient() {
                         style={{
                           fontFamily: 'var(--font-display)',
                           fontWeight: 700,
-                          fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)',
+                          fontSize: 'clamp(1.125rem, 2.5vw, 1.5rem)',
                           color: '#fff',
                           lineHeight: 1.25,
                           marginBottom: '8px',
@@ -312,7 +312,7 @@ export default function HomeClient() {
               style={{
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+                fontSize: 'clamp(1.375rem, 3vw, 2rem)',
                 color: 'var(--ink-primary)',
                 margin: 0,
               }}
@@ -436,7 +436,7 @@ export default function HomeClient() {
             style={{
               fontFamily: 'var(--font-display)',
               fontWeight: 700,
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)',
+              fontSize: 'clamp(1.375rem, 3.5vw, 2.25rem)',
               color: '#fff',
               marginBottom: '12px',
               lineHeight: 1.2,

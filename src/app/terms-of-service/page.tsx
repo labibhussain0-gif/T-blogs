@@ -24,7 +24,7 @@ export default function TermsOfServicePage() {
         <section style={{ background: 'var(--bg-white)', borderBottom: '1px solid var(--border-light)', padding: '56px 24px', textAlign: 'center' }}>
           <div style={{ maxWidth: '720px', margin: '0 auto' }}>
             <span style={{ display: 'inline-block', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-orange)', fontFamily: 'var(--font-body)', marginBottom: '12px' }}>Legal</span>
-            <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(2rem, 5vw, 3rem)', color: 'var(--ink-primary)', marginBottom: '12px', letterSpacing: '-0.03em' }}>
+            <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(1.75rem, 5vw, 2.75rem)', color: 'var(--ink-primary)', marginBottom: '12px', letterSpacing: '-0.03em' }}>
               Terms of Service
             </h1>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--ink-tertiary)' }}>

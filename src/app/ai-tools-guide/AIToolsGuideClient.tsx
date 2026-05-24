@@ -166,7 +166,7 @@ export default function AIToolsGuideClient() {
             style={{
               fontFamily: 'var(--font-display)',
               fontWeight: 900,
-              fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+              fontSize: 'clamp(1.85rem, 5vw, 3.25rem)',
               color: 'var(--ink-primary)',
               marginBottom: '24px',
               letterSpacing: '-0.02em',
@@ -384,7 +384,7 @@ export default function AIToolsGuideClient() {
             style={{
               fontFamily: 'var(--font-display)',
               fontWeight: 700,
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)',
+              fontSize: 'clamp(1.375rem, 3.5vw, 2.25rem)',
               color: 'var(--ink-primary)',
               textAlign: 'center',
               marginBottom: '16px',

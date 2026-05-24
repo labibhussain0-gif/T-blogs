@@ -65,7 +65,7 @@ export default function AboutClient() {
             style={{
               fontFamily: 'var(--font-display)',
               fontWeight: 900,
-              fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+              fontSize: 'clamp(1.85rem, 5vw, 3.25rem)',
               color: 'var(--ink-primary)',
               marginBottom: '20px',
               letterSpacing: '-0.03em',
@@ -118,7 +118,7 @@ export default function AboutClient() {
               style={{
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)',
+                fontSize: 'clamp(1.375rem, 3.5vw, 2.25rem)',
                 color: 'var(--ink-primary)',
                 marginBottom: '20px',
                 lineHeight: 1.15,
@@ -198,7 +198,7 @@ export default function AboutClient() {
               style={{
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)',
+                fontSize: 'clamp(1.375rem, 3.5vw, 2.25rem)',
                 color: 'var(--ink-primary)',
                 marginBottom: '12px',
               }}
@@ -262,7 +262,7 @@ export default function AboutClient() {
             style={{
               fontFamily: 'var(--font-display)',
               fontWeight: 700,
-              fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+              fontSize: 'clamp(1.25rem, 3vw, 1.75rem)',
               color: 'var(--ink-primary)',
               marginBottom: '16px',
             }}

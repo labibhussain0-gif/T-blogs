@@ -10,6 +10,7 @@ interface YouTubeEmbedProps {
 export default function YouTubeEmbed({ videoId, title }: YouTubeEmbedProps) {
   return (
     <div
+      className="yt-embed"
       style={{
         position: 'relative',
         width: '100%',

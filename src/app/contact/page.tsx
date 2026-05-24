@@ -43,7 +43,7 @@ export default function ContactPage() {
         <section style={{ background: 'var(--bg-white)', borderBottom: '1px solid var(--border-light)', padding: '64px 24px', textAlign: 'center' }}>
           <div style={{ maxWidth: '640px', margin: '0 auto' }}>
             <span style={{ display: 'inline-block', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-orange)', fontFamily: 'var(--font-body)', marginBottom: '12px' }}>Get in Touch</span>
-            <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(2rem, 5vw, 3rem)', color: 'var(--ink-primary)', marginBottom: '16px', letterSpacing: '-0.03em' }}>
+            <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(1.75rem, 5vw, 2.75rem)', color: 'var(--ink-primary)', marginBottom: '16px', letterSpacing: '-0.03em' }}>
               Contact T-blogs
             </h1>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '17px', color: 'var(--ink-secondary)', lineHeight: 1.7 }}>

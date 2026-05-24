@@ -81,7 +81,7 @@ function DefaultCard({ article }: { article: Article }) {
         style={{
           fontFamily: 'var(--font-display)',
           fontWeight: 700,
-          fontSize: 'clamp(1rem, 2vw, 1.25rem)',
+          fontSize: 'clamp(1.05rem, 2vw, 1.25rem)',
           lineHeight: 1.3,
           color: 'var(--ink-primary)',
           marginBottom: '8px',
@@ -161,7 +161,7 @@ function FeaturedCard({ article }: { article: Article }) {
           style={{
             fontFamily: 'var(--font-display)',
             fontWeight: 900,
-            fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
+            fontSize: 'clamp(1.625rem, 4.5vw, 2.75rem)',
             lineHeight: 1.1,
             color: 'var(--ink-primary)',
             marginBottom: '20px',
@@ -207,7 +207,7 @@ function FeaturedCard({ article }: { article: Article }) {
       </div>
 
       {/* Right — Image */}
-      <div className="order-1 lg:order-2 relative overflow-hidden" style={{ borderRadius: 'var(--radius-lg)', aspectRatio: '4/3' }}>
+      <div className="order-1 lg:order-2 relative overflow-hidden w-full aspect-[1376/768] lg:aspect-[4/3]" style={{ borderRadius: 'var(--radius-lg)' }}>
         <Link href={`/blog/${article.slug}`} aria-label={`Read ${article.title}`}>
           <span className="sr-only">{article.title}</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}

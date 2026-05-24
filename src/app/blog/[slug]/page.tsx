@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: Props) {
         />
       )}
 
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 24px 80px' }}>
+      <div className="max-w-[800px] mx-auto px-4 pt-8 pb-15 md:px-6 md:pt-12 md:pb-20">
         <nav aria-label="Breadcrumb" style={{ marginBottom: '32px', fontSize: '14px', fontWeight: 500, color: 'var(--ink-tertiary)' }}>
           <Link href="/blog" className="text-[var(--ink-tertiary)] hover:text-[var(--accent-orange)] transition-colors duration-200" style={{ textDecoration: 'none' }}>
             ← Back to Blog
@@ -109,7 +109,7 @@ export default async function BlogPostPage({ params }: Props) {
             {article.category}
           </span>
 
-          <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1.12, color: 'var(--ink-primary)', marginBottom: '24px', letterSpacing: '-0.02em' }}>
+          <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(1.625rem, 4vw, 3rem)', lineHeight: 1.12, color: 'var(--ink-primary)', marginBottom: '24px', letterSpacing: '-0.02em' }}>
             {article.title}
           </h1>
 
@@ -133,7 +133,7 @@ export default async function BlogPostPage({ params }: Props) {
           <ShareButton title={article.title} url={`${SITE_URL}/blog/${article.slug}`} />
         </div>
 
-        <div style={{ position: 'relative', width: '100%', height: '400px', marginBottom: '48px', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
+        <div className="relative w-full aspect-[1376/768] md:h-[400px] md:aspect-auto mb-12 rounded-lg overflow-hidden">
           <Image src={article.image} alt={article.imageAlt} fill priority sizes="(max-width: 768px) 100vw, 800px" className="object-cover" />
         </div>
 
@@ -151,7 +151,7 @@ export default async function BlogPostPage({ params }: Props) {
       {relatedArticles.length > 0 && (
         <section style={{ borderTop: '1px solid var(--border-light)', background: 'var(--bg-white)', padding: '80px 24px' }}>
           <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: 'var(--ink-primary)', marginBottom: '40px' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'clamp(1.375rem, 3vw, 2rem)', color: 'var(--ink-primary)', marginBottom: '40px' }}>
               Related Articles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -51,7 +51,7 @@ export default function FAQSection({ faqs, title = 'Frequently Asked Questions' 
             style={{
               fontFamily: 'var(--font-display)',
               fontWeight: 700,
-              fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+              fontSize: 'clamp(1.375rem, 3vw, 1.75rem)',
               color: 'var(--ink-primary)',
               margin: 0,
               letterSpacing: '-0.02em',

@@ -93,9 +93,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; }
-h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); }
-h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+h1 { font-size: clamp(1.85rem, 5vw, 3.5rem); font-weight: 900; }
+h2 { font-size: clamp(1.375rem, 3.5vw, 2.25rem); }
+h3 { font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
 
 p {
   font-family: var(--font-body);
@@ -184,6 +184,101 @@ p {
   background: none;
   padding: 0;
   color: inherit;
+}
+
+/* ===== Mobile Article Typography ===== */
+/* Overrides inline styles on article components via !important */
+/* Values based on Medium, Smashing Magazine, The Verge editorial patterns */
+@media (max-width: 767px) {
+  .prose-editorial {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+  }
+
+  .prose-editorial h2 {
+    font-size: 1.35rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+    padding-bottom: 0.375rem !important;
+  }
+
+  .prose-editorial h3 {
+    font-size: 1.15rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .prose-editorial h4 {
+    font-size: 1.05rem !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .prose-editorial p {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .prose-editorial ul,
+  .prose-editorial ol {
+    font-size: 15px !important;
+    padding-left: 18px !important;
+  }
+
+  .prose-editorial li {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+
+  .prose-editorial blockquote {
+    font-size: 15px !important;
+    padding-left: 16px !important;
+    margin: 24px 0 !important;
+  }
+
+  .prose-editorial blockquote p {
+    font-size: 15px !important;
+  }
+
+  .prose-editorial pre {
+    font-size: 13px !important;
+    padding: 16px !important;
+  }
+
+  .prose-editorial code {
+    font-size: 0.85em !important;
+  }
+
+  .prose-editorial table {
+    font-size: 13px !important;
+  }
+
+  .prose-editorial th,
+  .prose-editorial td {
+    padding: 10px !important;
+  }
+
+  /* Key takeaway / callout boxes — exclude YouTube embeds */
+  .prose-editorial > div:not(.yt-embed) {
+    padding: 16px !important;
+  }
+
+  .prose-editorial > div h4 {
+    font-size: 1rem !important;
+  }
+
+  .prose-editorial > div ul {
+    font-size: 14px !important;
+  }
+
+  .prose-editorial > div li {
+    font-size: 14px !important;
+  }
+
+  .prose-editorial > div p {
+    font-size: 14px !important;
+  }
 }
 
 /* ===== Animations ===== */

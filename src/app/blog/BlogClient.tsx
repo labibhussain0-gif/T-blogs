@@ -54,7 +54,7 @@ export default function BlogClient() {
             style={{
               fontFamily: 'var(--font-display)',
               fontWeight: 900,
-              fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+              fontSize: 'clamp(1.85rem, 5vw, 3.25rem)',
               color: 'var(--ink-primary)',
               marginBottom: '16px',
               letterSpacing: '-0.03em',
