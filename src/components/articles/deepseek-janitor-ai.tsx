@@ -10,6 +10,41 @@ export default function DeepSeekJanitorAIBody() {
         You are tired of mainstream LLM APIs silently restricting your outputs, breaking character immersion, or billing you like you are running a small nation-state. You want to know <strong>how to set up DeepSeek on Janitor AI</strong>. For unrestricted roleplay, deep character memory, and immersive storytelling, DeepSeek is a solid architectural choice: cheaper, highly capable, and fiercely uncensored. But connecting a raw API to a third-party client is not always plug-and-play. Let us break this down into components.
       </p>
 
+      {/* Quick Reference Configuration Box */}
+      <div style={{
+        background: 'var(--bg-white)',
+        borderRadius: 'var(--radius-md)',
+        padding: '24px',
+        margin: '32px 0',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.02)',
+        border: '1px solid var(--border-light)',
+        borderLeft: '4px solid var(--accent-orange)'
+      }}>
+        <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.25rem', color: 'var(--ink-primary)', marginTop: 0, marginBottom: '12px' }}>
+          ⚡ DeepSeek Janitor AI Quick Configuration Reference
+        </h3>
+        <p style={{ fontSize: '14px', color: 'var(--ink-secondary)', marginBottom: '16px', lineHeight: '1.6' }}>
+          Use these exact parameters in Janitor AI's <strong>Custom API (OpenAI-compatible)</strong> settings. 95% of setup errors (including the infinite loading screen) are caused by omitting the <code>/v1</code> endpoint path or writing the wrong model name.
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '14px' }}>
+          {[
+            { label: 'API Base URL (Direct)', value: 'https://api.deepseek.com/v1', desc: 'Must include the /v1 suffix' },
+            { label: 'API Base URL (OpenRouter)', value: 'https://openrouter.ai/api/v1', desc: 'Standard failover gateway' },
+            { label: 'Model Name (Direct)', value: 'deepseek-chat', desc: 'Matches DeepSeek V3 chat engine' },
+            { label: 'Model Name (OpenRouter)', value: 'deepseek/deepseek-chat', desc: 'Routing string for OpenRouter' },
+            { label: 'Min Account Balance', value: '$2.00 USD', desc: 'DeepSeek keys are inactive if balance is $0' }
+          ].map((item) => (
+            <div key={item.label} style={{ display: 'flex', flexDirection: 'column', paddingBottom: '8px', borderBottom: '1px solid var(--border-light)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ fontWeight: 600, color: 'var(--ink-primary)' }}>{item.label}</span>
+                <code style={{ fontFamily: 'var(--font-mono)', background: 'var(--bg-warm-gray)', padding: '2px 8px', borderRadius: '4px', color: 'var(--accent-orange)', fontSize: '12px', fontWeight: 600 }}>{item.value}</code>
+              </div>
+              <span style={{ fontSize: '12px', color: 'var(--ink-tertiary)', marginTop: '4px' }}>{item.desc}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <YouTubeEmbed videoId="eXS0VmqDnkM" title="How To Use Janitor AI With DeepSeek In 2 Minutes!" />
 
       <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>

@@ -9,6 +9,37 @@ export default function IsVirtualRealityBadForYourEyesBody() {
         The proliferation of virtual reality (VR) headsets in both entertainment and enterprise environments has prompted significant clinical inquiry regarding their long-term ocular effects. Patients and practitioners alike frequently ask: does prolonged exposure to stereoscopic displays cause permanent vision damage? According to the American Academy of Ophthalmology, there is currently no empirical evidence to suggest that VR headsets cause permanent vision loss or structural ocular damage in healthy adults. However, the unique optical mechanics of these devices can induce a range of transient physiological symptoms, collectively categorized under digital eye strain. To understand why these symptoms occur, we must examine the specific optical phenomena introduced by head-mounted displays and their interaction with the human visual system.
       </p>
 
+      {/* Ocular Science Summary Box */}
+      <div style={{
+        background: 'var(--bg-white)',
+        borderRadius: 'var(--radius-md)',
+        padding: '24px',
+        margin: '32px 0',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.02)',
+        border: '1px solid var(--border-light)',
+        borderLeft: '4px solid var(--accent-orange)'
+      }}>
+        <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.25rem', color: 'var(--ink-primary)', marginTop: 0, marginBottom: '12px' }}>
+          🩺 Ocular Science Verdict: Is VR Bad for Your Eyes?
+        </h3>
+        <p style={{ fontSize: '15px', lineHeight: '1.6', color: 'var(--ink-secondary)', marginBottom: '16px' }}>
+          Here is the clinical consensus summarized from the <strong>American Academy of Ophthalmology (AAO)</strong> and peer-reviewed journals:
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }} className="grid grid-cols-1 md:grid-cols-3">
+          {[
+            { label: 'Permanent Damage', value: 'No', desc: 'No empirical evidence suggests structural or long-term vision loss in healthy eyes.' },
+            { label: 'Ocular Strain', value: 'High', desc: 'Prolonged sessions trigger temporary fatigue, dry eyes, and headaches due to decoupling.' },
+            { label: 'Child Safety (<13)', value: 'Caution', desc: 'Prepubescent binocular pathways are still maturing; sessions must be actively limited.' }
+          ].map((item) => (
+            <div key={item.label} style={{ background: 'var(--bg-cream)', padding: '16px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)' }}>
+              <span style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--ink-tertiary)' }}>{item.label}</span>
+              <p style={{ fontSize: '20px', fontWeight: 900, color: 'var(--accent-orange)', margin: '4px 0 8px' }}>{item.value}</p>
+              <p style={{ fontSize: '12px', color: 'var(--ink-secondary)', lineHeight: '1.4', margin: 0 }}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <YouTubeEmbed videoId="zR0y0LTmzT0" title="Oculus Quest 2 - Will VR Damage Your Eyes? 4 Dangers You NEED To Know!" />
 
       <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
@@ -20,6 +51,33 @@ export default function IsVirtualRealityBadForYourEyesBody() {
       <p>
         When a user wears a VR headset, this natural coupling is disrupted. The stereoscopic displays are positioned at a fixed, short distance from the eyes—typically only a few centimeters—while specialized optical lenses bend the light to simulate objects at varying focal depths, ranging from a few feet to optical infinity. Consequently, the visual cortex commands the eyes to converge on a distant virtual object, yet the ciliary muscles must maintain accommodation on the physical screen positioned directly in front of the cornea. This artificial decoupling of a deeply ingrained physiological reflex requires continuous neuro-muscular compensation. Over time, this sensory mismatch overworks the oculomotor system, manifesting clinically as asthenopia, severe eye strain, tension headaches, and transient blurred vision. While researchers and hardware manufacturers are actively developing varifocal and light-field displays to mitigate VAC, it remains an inherent limitation of current-generation consumer VR technology.
       </p>
+
+      {/* Natural vs. VR Vision Matrix */}
+      <div style={{ margin: '32px 0', overflowX: 'auto' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '15px', color: 'var(--ink-secondary)', background: 'var(--bg-white)', border: '1px solid var(--border-light)', borderRadius: 'var(--radius-md)' }}>
+          <thead>
+            <tr style={{ background: 'var(--bg-cream)', borderBottom: '1px solid var(--border-light)' }}>
+              <th style={{ padding: '12px 16px', textAlign: 'left', fontWeight: 700, color: 'var(--ink-primary)' }}>Visual Mechanism</th>
+              <th style={{ padding: '12px 16px', textAlign: 'left', fontWeight: 700, color: 'var(--ink-primary)' }}>Natural Environment (Coupled)</th>
+              <th style={{ padding: '12px 16px', textAlign: 'left', fontWeight: 700, color: 'var(--ink-primary)' }}>Virtual Reality (Decoupled)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { mechanism: 'Vergence (Alignment)', natural: 'Eyes pivot inwards or outwards matching the exact physical distance of the target.', vr: 'Eyes pivot to align with simulated virtual elements placed at varying apparent depths.' },
+              { mechanism: 'Accommodation (Focus)', natural: 'Ciliary muscles reshape the natural lens to focus light directly from the physical target.', vr: 'Ciliary muscles must lock focus on the near physical display screen (fixed focal plane).' },
+              { mechanism: 'Neurological Reflex', natural: 'Vergence and accommodation signals operate in perfect, coupled harmony.', vr: 'Sensory mismatch occurs, forcing the brain to decouple these deeply ingrained muscular reflexes.' },
+              { mechanism: 'Ocular Consequence', natural: 'Relaxed, natural ocular tracking with minimal baseline fatigue.', vr: 'High asthenopia, tension headaches, and transient blurriness during adaptation.' }
+            ].map((row, idx) => (
+              <tr key={idx} style={{ borderBottom: idx === 3 ? 'none' : '1px solid var(--border-light)' }}>
+                <td style={{ padding: '12px 16px', fontWeight: 600, color: 'var(--ink-primary)' }}>{row.mechanism}</td>
+                <td style={{ padding: '12px 16px' }}>{row.natural}</td>
+                <td style={{ padding: '12px 16px', borderLeft: '1px solid var(--border-light)' }}>{row.vr}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4" style={{ margin: '40px 0' }}>
         {[

@@ -78,13 +78,13 @@ export default function BlockchainIPBody() {
         Patents and Prior Art Logs
       </h3>
       <p>
-        The patent system is notoriously slow, staggeringly expensive, and highly opaque. Inventors and corporate R&amp;D departments often spend years developing a product only to find someone else filed a patent mere weeks before them. In the high-stakes realm of patent law, establishing a reliable timeline of invention is paramount.
+        The patent system is notoriously slow, staggeringly expensive, and highly opaque. Inventors and corporate Research and Development (R&D) departments often spend years developing a product only to find someone else filed a patent mere weeks before them. In the high-stakes realm of patent law, establishing a reliable timeline of invention is paramount.
       </p>
       <p>
         This is where the concept of Prior Art becomes incredibly crucial. Prior art is any evidence that your invention is already known, effectively rendering new patent claims invalid. Blockchain serves as an impeccable, enterprise-grade mechanism for establishing defensive prior art. 
       </p>
       <p>
-        By maintaining a continuous, automated cryptographic log of your engineering notebooks, Git commits, lab results, and CAD files on a ledger, a company can definitively prove exactly when they developed a specific technology. If a patent troll later attempts to sue the company for infringement, the company can produce the blockchain timestamps to demonstrate that their internal work predates the troll&apos;s patent filing. This doesn&apos;t replace the formal patent process—you still need to file with the USPTO if you want an offensive monopoly—but it builds an incredibly robust defensive moat around your ongoing R&amp;D efforts without publicly disclosing your trade secrets before you are ready.
+        By maintaining a continuous, automated cryptographic log of your engineering notebooks, Git commits, lab results, and CAD files on a ledger, a company can definitively prove exactly when they developed a specific technology. If a patent troll later attempts to sue the company for infringement, the company can produce the blockchain timestamps to demonstrate that their internal work predates the troll's patent filing. This doesn't replace the formal patent process—you still need to file with the USPTO if you want an offensive monopoly—but it builds an incredibly robust defensive moat around your ongoing R&D efforts without publicly disclosing your trade secrets before you are ready.
       </p>
 
       <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.35rem', color: 'var(--ink-primary)', marginTop: '32px', marginBottom: '16px' }}>
@@ -112,6 +112,49 @@ export default function BlockchainIPBody() {
       <p>
         Furthermore, traditional legal contracts are intentionally ambiguous for a reason. Terms like &quot;commercially reasonable efforts,&quot; &quot;force majeure,&quot; or &quot;material breach&quot; exist precisely because human business relationships and edge cases cannot be perfectly defined in advance. Smart contracts, however, possess zero flexibility. If a vulnerability exists in the smart contract code, or an edge case occurs that the developer didn&apos;t foresee, the contract will still execute verbatim. In traditional licensing, a dispute goes to arbitration or a judge who applies common sense and intent. In smart contracts, an exploit simply leads to the immediate, irreversible draining of funds, followed by developers shrugging and saying &quot;code is law.&quot;
       </p>
+
+      {/* ERC-721 Metadata Blueprint */}
+      <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.35rem', color: 'var(--ink-primary)', marginTop: '32px', marginBottom: '16px' }}>
+        Sovereign ERC-721 Metadata Blueprint for IP Licensing
+      </h3>
+      <p>
+        To legally bind an on-chain token to a physical IP agreement, your metadata schema must cryptographically link to the secure, hashed contract document (stored on IPFS or a secure storage network). Below is a standardized JSON schema example:
+      </p>
+
+      <div
+        style={{
+          background: '#1a1a2e',
+          borderRadius: 'var(--radius-md)',
+          padding: '24px',
+          margin: '24px 0',
+          overflow: 'hidden',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '16px' }}>
+          <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#EF4444' }} />
+          <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#F59E0B' }} />
+          <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#22C55E' }} />
+        </div>
+        <pre style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', color: '#E2E8F0', lineHeight: 1.6, margin: 0, overflowX: 'auto' }}>
+          <code>{`{
+  "title": "IP Token Asset Metadata",
+  "type": "object",
+  "properties": {
+    "name": "Patent US-110294-B2 License",
+    "description": "Exclusive distribution rights license for high-throughput thermal battery technology.",
+    "image": "ipfs://QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco",
+    "properties": {
+      "licensor": "Sovereign Energy Labs Inc.",
+      "licensee_restriction": "North American Region only",
+      "licensing_agreement_hash": "sha256-4f8a32d1e0a294bbf8b98218da32e8d1a1b184ef4b20a56fbc8c18742b8921df",
+      "licensing_agreement_uri": "ipfs://QmYwAPJthnAxZptBq5PpasKb63t72tU242s9ZtU245as8f",
+      "jurisdiction": "Delaware, United States",
+      "expiration_timestamp": 1785283200
+    }
+  }
+}`}</code>
+        </pre>
+      </div>
 
       <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
         Legal Reality: Will Courts Accept On-Chain Evidence?
@@ -152,7 +195,7 @@ export default function BlockchainIPBody() {
         The software engineering community needs to stop treating blockchain like a magical panacea for legal friction. Intellectual property rights are not enforced by consensus algorithms or cryptography; they are ultimately enforced by human judges, sovereign laws, and men with badges. 
       </p>
       <p>
-        If you need a decentralized, cryptographically secure audit log to establish bulletproof defensive prior art, verify physical supply chain provenance against counterfeiting, or timestamp internal R&amp;D efforts across a consortium of untrusting partners, then by all means, use a blockchain. It is an excellent, purpose-built architectural choice for that highly specific set of constraints.
+        If you need a decentralized, cryptographically secure audit log to establish bulletproof defensive prior art, verify physical supply chain provenance against counterfeiting, or timestamp internal Research and Development (R&D) efforts across a consortium of untrusting partners, then by all means, use a blockchain. It is an excellent, purpose-built architectural choice for that highly specific set of constraints.
       </p>
       <p>
         But if you just need a fast, reliable database to manage your own company&apos;s internal licensing agreements, track copyright registrations, or gate access to digital content, use PostgreSQL. Stop throwing Web3 tech at Web2 problems, and stop over-engineering simple CRUD applications under the guise of revolutionizing the legal system.

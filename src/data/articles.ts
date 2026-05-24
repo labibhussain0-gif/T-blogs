@@ -52,11 +52,11 @@ export const articles: Article[] = [
   {
     id: 1,
     slug: 'deepseek-janitor-ai',
-    title: 'How to Set Up DeepSeek on Janitor AI',
+    title: 'Fixing DeepSeek on Janitor AI: API Setup and Infinite Loading Fix',
     excerpt:
-      'A comprehensive, no-nonsense technical guide on how to set up DeepSeek on Janitor AI. Stop guessing and configure your API endpoints correctly.',
+      'Tired of the infinite loading screen when configuring DeepSeek on Janitor AI? Here is the exact, zero-guesswork setup guide detailing the correct base URL, key validation, and model settings.',
     metaDescription:
-      'Learn how to set up DeepSeek on Janitor AI step by step. Configure your API key, base URL, and model parameters correctly — no guesswork.',
+      'Fix your DeepSeek Janitor AI setup instantly. Steps to resolve infinite loading screen, configure correct /v1 base URL, and choose between V3 and R1.',
     category: 'AI Research',
     date: 'May 6, 2026',
     lastUpdated: 'May 6, 2026',
@@ -124,11 +124,11 @@ export const articles: Article[] = [
   {
     id: 2,
     slug: 'eu-ai-act-explained',
-    title: 'EU AI Act Explained: What Developers Need to Know in 2026',
+    title: 'EU AI Act Compliance Guide: Risk Tiers and Deadlines for Developers',
     excerpt:
-      'The EU AI Act is now in force. Here is what it actually means for developers, product teams, and companies shipping AI features to European users.',
+      'The EU AI Act is now fully active with multi-million euro penalties for non-compliance. Here is the developer-focused guide mapping out risk tiers, compliance dates, and local deployment options.',
     metaDescription:
-      'EU AI Act news and explained for developers: risk tiers, compliance deadlines, prohibited systems, and what you must do before shipping AI to EU users.',
+      'EU AI Act compliance guide for developers. Clear breakdown of prohibited and high-risk AI tiers, specific 2026/2027 deadlines, and penalties.',
     category: 'AI Research',
     date: 'May 4, 2026',
     lastUpdated: 'May 4, 2026',
@@ -186,11 +186,11 @@ export const articles: Article[] = [
   {
     id: 3,
     slug: 'will-cybersecurity-be-replaced-by-ai',
-    title: 'Will Cybersecurity Be Replaced by AI? The Honest Answer',
+    title: 'Will AI Replace Cybersecurity? The Reality and AI Security Roadmap',
     excerpt:
-      'Everyone is asking whether AI will replace cybersecurity engineers. The real answer is more complicated — and more interesting — than the headlines suggest.',
+      'Cut through the marketing hype. While AI automates log parsing and alert fatigue, it raises the demand for security architects and adversarial ML defenders. Discover the concrete roadmap to future-proof your security career.',
     metaDescription:
-      'Will cybersecurity be replaced by AI? Understand which roles AI automates, which it enhances, and what skills protect your cybersecurity career.',
+      'Will cybersecurity be replaced by AI? Discover what tasks AI automates, the rogue agent challenge, and the new career roadmap in Adversarial ML and LLM red-teaming.',
     category: 'Engineering',
     date: 'May 1, 2026',
     lastUpdated: 'May 1, 2026',
@@ -253,11 +253,11 @@ export const articles: Article[] = [
   {
     id: 4,
     slug: 'is-virtual-reality-bad-for-your-eyes',
-    title: 'Is Virtual Reality Bad for Your Eyes? What the Research Says',
+    title: 'Does VR Damage Your Eyes? Ocular Science vs. Screen Hype',
     excerpt:
-      'Short answer: it depends on the headset, the session length, and your age. Long answer: the research is more nuanced than the fear-mongering suggests.',
+      'Does prolonged exposure to VR headsets cause permanent eye damage? We analyze the ocular science behind the vergence-accommodation conflict, dry eyes, and pediatric safety guidelines.',
     metaDescription:
-      'Is virtual reality bad for your eyes? Explore the research on VR eye strain, myopia risk, and safe usage guidelines for adults and children.',
+      'Is VR bad for your eyes? The clinical reality of the vergence-accommodation conflict, dry eyes, reduced blink rate, and safety limits for children.',
     category: 'Tech Trends',
     date: 'April 28, 2026',
     lastUpdated: 'April 28, 2026',
@@ -305,11 +305,11 @@ export const articles: Article[] = [
   {
     id: 5,
     slug: 'blockchain-intellectual-property',
-    title: 'Blockchain in Intellectual Property: A Practical Overview',
+    title: 'Blockchain for Intellectual Property: Legal Admissibility and Technical Reality',
     excerpt:
-      'Blockchain is being used to register, verify, and license intellectual property rights. Here is how it actually works — and where it still falls short.',
+      'A technical autopsy of on-chain IP registry. Discover how hashing and Merkle trees prove existence, the limits of smart-contract DRM, and where blockchain timestamps are actually admitted in court.',
     metaDescription:
-      'Blockchain in intellectual property: how blockchain registers copyright, verifies ownership, enables licensing, and what limitations still exist.',
+      'Blockchain in intellectual property: prior art, timestamps, court admissibility, the eIDAS regulation, and why Web3 DRM fails on the client-side.',
     category: 'Tech Trends',
     date: 'April 25, 2026',
     lastUpdated: 'April 25, 2026',
@@ -369,9 +369,11 @@ export const articles: Article[] = [
   {
     id: 6,
     slug: 'brand-visibility-ai-search-engines',
-    title: 'Architecting for LLMs: How to Improve Brand Visibility in AI Search Engines',
-    excerpt: 'Technical breakdown of Generative Engine Optimization (GEO). How to format data for Perplexity and Google AI Overviews.',
-    metaDescription: 'Improve brand visibility in AI search engines using semantic HTML, llms.txt, and structured JSON-LD.',
+    title: 'Generative Engine Optimization (GEO): Improving Visibility in Perplexity and AI Search',
+    excerpt:
+      'Move beyond traditional SEO. Discover the technical blueprints of Generative Engine Optimization (GEO)—including semantic structures, llms.txt configurations, and JSON-LD metadata schema—to secure AI engine citations.',
+    metaDescription:
+      'Generative Engine Optimization (GEO) guide: How to format metadata, configure llms.txt, and write structured schema to improve brand visibility in AI search.',
     category: 'Engineering',
     date: 'May 14, 2026',
     readTime: '9 min',
@@ -458,9 +460,11 @@ export const articles: Article[] = [
   {
     id: 8,
     slug: 'applied-machine-learning-healthcare-prediction',
-    title: 'From Kaggle to Production: Applied Machine Learning in Healthcare',
-    excerpt: 'Deep dive into the architectural challenges of deploying predictive models into secure pipelines.',
-    metaDescription: 'How bionic AI ML engineers move hypertension prediction from Kaggle to secure, production-ready healthcare APIs.',
+    title: 'Deploying Healthcare ML: Moving Hypertension Models from Kaggle to Production',
+    excerpt:
+      'Bridging the gap between static Kaggle CSVs and HL7 streams. Learn the architectural pipelines, HIPAA security constraints, and complete FastAPI blueprints needed to deploy clinical prediction endpoints.',
+    metaDescription:
+      'How bionic AI ML engineers move hypertension prediction from Kaggle to secure, production-grade, HIPAA-compliant FastAPI endpoints.',
     category: 'AI Research',
     date: 'May 16, 2026',
     readTime: '10 min',
@@ -496,9 +500,11 @@ export const articles: Article[] = [
   {
     id: 9,
     slug: 'hr-legal-real-estate-tech-architecture',
-    title: 'Sector Software Architecture: AI Integration in HR, Legal, and Real Estate Tech',
-    excerpt: 'How legacy industries are rebuilding their backends using modern serverless stacks.',
-    metaDescription: 'HR tech news today: Rebuilding legal, HR, and real estate legacy monoliths with vector databases and AI integration.',
+    title: 'Enterprise AI Blueprints: HR Tech, Legal Tech, and Real Estate Systems',
+    excerpt:
+      'Concrete architectural blueprints showing how modern enterprises integrate vector databases, secure RAG systems, and VLMs into legacy HR, legal, and real estate stacks.',
+    metaDescription:
+      'Architectural blueprints for enterprise AI: Vector database search in HR, private RAG in legal law firms, and VLM multi-modal discovery in PropTech.',
     category: 'Engineering',
     date: 'May 17, 2026',
     readTime: '12 min',
@@ -590,7 +596,7 @@ export const articles: Article[] = [
     authorLinkedin: AUTHOR.linkedin,
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop',
+    image: '/images/blog/best-ai-chatbots.webp',
     imageAlt: 'AI chatbot interfaces side by side representation',
     keywords: [
       'best ai chatbots',
@@ -640,7 +646,7 @@ export const articles: Article[] = [
     authorLinkedin: AUTHOR.linkedin,
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
-    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop',
+    image: '/images/blog/how-to-use-claude-ai.webp',
     imageAlt: 'Concept art representing Claude\'s analytical interface',
     keywords: [
       'how to use claude ai',
@@ -689,7 +695,7 @@ export const articles: Article[] = [
     authorLinkedin: AUTHOR.linkedin,
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
-    image: 'https://images.unsplash.com/photo-1546776310-eef45dd6d63c?q=80&w=800&auto=format&fit=crop',
+    image: '/images/blog/how-to-use-chatgpt-effectively.webp',
     imageAlt: 'Futuristic AI assistant circuit concept',
     keywords: [
       'how to use chatgpt effectively',
@@ -706,7 +712,7 @@ export const articles: Article[] = [
       },
       {
         question: 'What is the best prompting framework for ChatGPT?',
-        answer: 'Use the 4-part structure: 1. Role (Who is the AI?), 2. Context (What is the scenario?), 3. Task (What is the deliverable?), and 4. Rules & Output Format (What are the constraints?).'
+        answer: 'Use the 4-part structure: 1. Role (Who is the AI?), 2. Context (What is the scenario?), 3. Task (What is the deliverable?), and 4. Rules and Output Format (What are the constraints?).'
       },
       {
         question: 'Does the ChatGPT free tier include image generation?',

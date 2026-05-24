@@ -37,7 +37,7 @@ export default function AppliedMachineLearningHealthcareBody() {
 
       <h2 className="font-[var(--font-display)] font-bold text-[1.75rem] text-[var(--ink-primary)] mt-12 mb-5 pb-3 border-b border-[var(--border-light)]">
         Architecting the Secure ML Pipeline
-      </h2>
+       </h2>
       <p>
         Moving to production requires a robust architecture. Here is what a modern, production-grade healthcare ML pipeline looks like:
       </p>
@@ -55,6 +55,90 @@ export default function AppliedMachineLearningHealthcareBody() {
           <strong className="text-[var(--ink-primary)]">Inference API:</strong> Models are served using FastAPI or Triton Inference Server, packaged in Docker containers, and deployed on secure cloud infrastructure that strictly complies with HIPAA and GDPR regulations.
         </li>
       </ul>
+
+      {/* Production FastAPI Blueprint */}
+      <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.35rem', color: 'var(--ink-primary)', marginTop: '32px', marginBottom: '16px' }}>
+        Production FastAPI Blueprint for Clinical Inference
+      </h3>
+      <p>
+        To move beyond static Kaggle CSVs, we need a secure API that validates patient telemetry using <code>Pydantic</code>, checks authentication tokens, logs inference predictions for audits, and returns HIPAA-compliant payloads. Below is a production-ready python template:
+      </p>
+      
+      <div
+        style={{
+          background: '#1a1a2e',
+          borderRadius: 'var(--radius-md)',
+          padding: '24px',
+          margin: '24px 0',
+          overflow: 'hidden',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '16px' }}>
+          <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#EF4444' }} />
+          <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#F59E0B' }} />
+          <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#22C55E' }} />
+        </div>
+        <pre style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', color: '#E2E8F0', lineHeight: 1.6, margin: 0, overflowX: 'auto' }}>
+          <code>{`import os
+import joblib
+import logging
+from fastapi import FastAPI, Depends, HTTPException, Security
+from fastapi.security import APIKeyHeader
+from pydantic import BaseModel, Field
+
+# Setup logger for HIPAA security audits
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - AUDIT - %(message)s")
+logger = logging.getLogger("clinical_inference")
+
+app = FastAPI(title="Hypertension Inference Server", version="1.0.0")
+API_KEY_HEADER = APIKeyHeader(name="X-Clinical-Token")
+
+# Load model serialized from Kaggle training pipeline
+MODEL_PATH = os.getenv("HYPERTENSION_MODEL_PATH", "./models/hypertension_xgb_v1.pkl")
+try:
+    classifier = joblib.load(MODEL_PATH)
+except Exception as e:
+    logger.critical(f"Failed to load clinical classifier from {MODEL_PATH}: {str(e)}")
+    classifier = None
+
+class PatientTelemetry(BaseModel):
+    systolic_bp: float = Field(..., ge=50, le=250, description="Systolic blood pressure (mmHg)")
+    diastolic_bp: float = Field(..., ge=30, le=150, description="Diastolic blood pressure (mmHg)")
+    age: int = Field(..., ge=0, le=120, description="Patient age in years")
+    bmi: float = Field(..., ge=10, le=60, description="Body Mass Index")
+    smoke_status: int = Field(..., ge=0, le=1, description="Smoking status: 0=No, 1=Yes")
+
+def verify_token(token: str = Security(API_KEY_HEADER)):
+    if token != os.getenv("CLINICAL_API_TOKEN"):
+        logger.warning("Unauthorized access attempt rejected.")
+        raise HTTPException(status_code=403, detail="Invalid clinical security token")
+    return token
+
+@app.post("/api/v1/predict/hypertension", dependencies=[Depends(verify_token)])
+async def predict_hypertension(data: PatientTelemetry):
+    if not classifier:
+        raise HTTPException(status_code=500, detail="Classifier offline")
+    
+    # Feature array in the exact order trained on Kaggle
+    features = [[data.systolic_bp, data.diastolic_bp, data.age, data.bmi, data.smoke_status]]
+    
+    try:
+        prob = float(classifier.predict_proba(features)[0][1])
+        risk_tier = "HIGH" if prob > 0.75 else "MEDIUM" if prob > 0.40 else "LOW"
+        
+        # Log audit record (no PII transmitted, strictly telemetry IDs)
+        logger.info(f"Model predict complete. Probability: {prob:.4f} | Risk: {risk_tier}")
+        
+        return {
+            "hypertension_probability": prob,
+            "clinical_risk_tier": risk_tier,
+            "status": "success"
+        }
+    except Exception as e:
+        logger.error(f"Inference pipeline execution error: {str(e)}")
+        raise HTTPException(status_code=500, detail="Inference failure")`}</code>
+        </pre>
+      </div>
 
       <h2 className="font-[var(--font-display)] font-bold text-[1.75rem] text-[var(--ink-primary)] mt-12 mb-5 pb-3 border-b border-[var(--border-light)]">
         Monitoring and Drift Detection
