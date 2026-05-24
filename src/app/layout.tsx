@@ -61,6 +61,13 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} ${jetbrainsMono.variable} h-full`}
     >
       <head>
+        {/* Google AdSense */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2587930808010469"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         {/* Google tag (gtag.js) */}
         <Script
           strategy="afterInteractive"
