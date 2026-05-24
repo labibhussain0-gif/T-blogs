@@ -191,54 +191,6 @@ export default function BestAIChatbotsBody() {
         If your daily work involves heavy programming, codebase refactoring, or precise technical content writing, <strong>Claude Pro</strong> is worth every penny of the $20 monthly subscription. If you rely on audio workflows, require extensive custom GPT plugins, or need a generalist chatbot that handles daily consumer tasks flawlessly, <strong>ChatGPT Plus</strong> remains the safest bet. Select <strong>Gemini Advanced</strong> only if your company relies entirely on Google's cloud ecosystem.
       </p>
 
-      {/* Styled FAQ List inside body for maximum structural richness */}
-      <div style={{
-        marginTop: '64px',
-        padding: '32px',
-        background: 'var(--bg-white)',
-        borderRadius: 'var(--radius-lg)',
-        border: '1px solid var(--border-warm)'
-      }}>
-        <h3 style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: '1.6rem',
-          fontWeight: 700,
-          color: 'var(--ink-primary)',
-          marginTop: 0,
-          marginBottom: '24px'
-        }}>
-          Frequently Asked Questions
-        </h3>
-        
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          <div>
-            <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', fontWeight: 600, color: 'var(--ink-primary)', margin: '0 0 8px 0' }}>
-              What is the absolute best AI chatbot in 2026?
-            </h4>
-            <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--ink-secondary)' }}>
-              There is no single best chatbot. Claude 3.5 Sonnet is the premier choice for coding and engineering workflows. ChatGPT Plus is the best general-purpose assistant, while Gemini Advanced leads in Google Workspace contexts.
-            </p>
-          </div>
-
-          <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '20px' }}>
-            <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', fontWeight: 600, color: 'var(--ink-primary)', margin: '0 0 8px 0' }}>
-              Can Gemini replace ChatGPT entirely?
-            </h4>
-            <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--ink-secondary)' }}>
-              Only if your workflow relies heavily on Google Workspace documents and email. For coding, complex prompt instructions, and tool integrations, ChatGPT and Claude still offer superior reliability and speed.
-            </p>
-          </div>
-
-          <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '20px' }}>
-            <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', fontWeight: 600, color: 'var(--ink-primary)', margin: '0 0 8px 0' }}>
-              Why is Claude preferred by software engineers over ChatGPT?
-            </h4>
-            <p style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--ink-secondary)' }}>
-              Claude adheres strictly to system prompts, follows logical constraints without "forgetting" rules, and excels at multi-file directory awareness, making it highly suitable for codebase orchestration.
-            </p>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

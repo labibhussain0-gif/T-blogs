@@ -246,64 +246,6 @@ RULES:
         If your production workflow relies on heavy programmatic image generation (e.g., generating social preview assets or schema graphics at scale), trying to bypass these limits on the free tier is a recipe for silent build failures. You are far better off deploying a dedicated API route utilizing paid model endpoints or running localized models on a self-hosted server cluster.
       </p>
 
-      {/* Styled Q&A/FAQ List */}
-      <hr style={{ border: 'none', borderTop: '1px solid var(--border-light)', margin: '56px 0 48px' }} />
-
-      <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginBottom: '32px' }}>
-        Frequently Asked Questions
-      </h2>
-
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '40px' }}>
-        {[
-          {
-            q: 'How do I use ChatGPT effectively for programming?',
-            a: 'Avoid conversational phrasing. Establish a clear developer role (e.g., "Act as a Senior React Engineer"), supply explicit context constraints, isolate your target code within XML tags, and mandate that it outputs complete, syntactically correct code blocks with zero placeholders.',
-          },
-          {
-            q: 'What is a ChatGPT prompting framework?',
-            a: 'It is a structured prompt layout designed to prevent context drift. A standard framework like the System Context Envelope divides input into four distinct zones: Role Assignment, Context and Ambient Constraints, Isolated Input Data, and Deliverable Output Specification.',
-          },
-          {
-            q: 'How do Custom Instructions work in ChatGPT?',
-            a: 'Custom Instructions allow you to set global system variables. You fill out two boxes: one detailing your profile (stack, background, style) and another specifying output format rules (no fluff, code first, authoritative tone). The platform automatically injects these rules behind the scenes in every new chat window.',
-          },
-          {
-            q: 'Does the ChatGPT free tier include image generation?',
-            a: 'Yes. Free tier users are granted access to DALL·E 3, but under strict rate limits—typically capped at two image generations per 24 hours. When the quota is met, the system triggers a silent text fallback and prompts a Plus subscription upgrade.',
-          },
-          {
-            q: 'How do I stop ChatGPT from hallucinating?',
-            a: 'Enforce strict grounding parameters: command the model to say "I don\'t know" rather than guess when data is missing, instruct it to verify citations step-by-step, and demand that it process its logical reasoning in a hidden <scratchpad> block before outputting its final response.',
-          },
-        ].map((item, index) => (
-          <div
-            key={index}
-            style={{
-              padding: '24px',
-              borderRadius: 'var(--radius-md)',
-              border: '1px solid var(--border-light)',
-              background: 'var(--bg-white)',
-            }}
-          >
-            <h3
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontWeight: 700,
-                fontSize: '1.15rem',
-                color: 'var(--ink-primary)',
-                marginTop: 0,
-                marginBottom: '12px',
-                lineHeight: 1.4,
-              }}
-            >
-              {item.q}
-            </h3>
-            <p style={{ fontSize: '15px', color: 'var(--ink-secondary)', lineHeight: 1.6, margin: 0 }}>
-              {item.a}
-            </p>
-          </div>
-        ))}
-      </div>
     </>
   );
 }

@@ -210,35 +210,6 @@ export default function HowToUseClaudeAIBody() {
       <p>
         If you are still mapping out your complete engineering stack, check out our comprehensive <Link href="/ai-tools-guide" style={{ color: 'var(--accent-orange)', textDecoration: 'underline' }}>AI tools guide</Link> for a deep dive into platform features, API pricing, and automation frameworks.
       </p>
-
-      <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
-        Frequently Asked Questions
-      </h2>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', margin: '32px 0' }}>
-        {[
-          {
-            q: 'How do I access Claude Projects?',
-            a: 'Projects are a premium feature available to Claude Pro and Claude Team subscribers. You can access them by clicking the "Projects" tab in the left-hand sidebar of the main Claude.ai dashboard.'
-          },
-          {
-            q: 'Can I use Claude Artifacts on the free plan?',
-            a: 'Yes. Claude Artifacts are available on all tiers, including the free tier. Make sure to toggle them on in the "Feature Previews" menu under your profile settings in the bottom-left corner.'
-          },
-          {
-            q: 'What is the maximum token limit for Claude Projects?',
-            a: 'Claude Projects support uploading files up to a combined limit of 500,000 tokens (approximately 375,000 words), making it ideal for holding large codebase structures and extensive documentation.'
-          },
-          {
-            q: 'Why should I use XML tags in Claude prompts?',
-            a: 'Anthropic\'s models are trained specifically on XML-formatted datasets. Structuring your prompts with tags like <context> or <rules> creates explicit boundaries that the model respects, resulting in much higher instruction compliance.'
-          }
-        ].map((faq, index) => (
-          <div key={index} style={{ padding: '20px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-light)', background: 'var(--bg-white)' }}>
-            <strong style={{ display: 'block', fontSize: '16px', color: 'var(--ink-primary)', marginBottom: '8px' }}>{faq.q}</strong>
-            <p style={{ fontSize: '14px', color: 'var(--ink-secondary)', margin: 0, lineHeight: 1.6 }}>{faq.a}</p>
-          </div>
-        ))}
-      </div>
     </>
   );
 }
