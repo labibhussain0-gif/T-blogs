@@ -15,4 +15,8 @@ export const articleComponents: Record<string, React.ComponentType<any>> = {
   'best-ai-chatbots': dynamic(() => import('./best-ai-chatbots'), { ssr: true }),
   'how-to-use-claude-ai': dynamic(() => import('./how-to-use-claude-ai'), { ssr: true }),
   'how-to-use-chatgpt-effectively': dynamic(() => import('./how-to-use-chatgpt-effectively'), { ssr: true }),
+  'best-free-ai-tools': dynamic(() => import('./best-free-ai-tools'), { ssr: true }),
+  'perplexity-vs-google': dynamic(() => import('./perplexity-vs-google'), { ssr: true }),
+  'deepseek-vs-chatgpt': dynamic(() => import('./deepseek-vs-chatgpt'), { ssr: true }),
+  'grok-ai-world-richest-man': dynamic(() => import('./grok-ai-world-richest-man'), { ssr: true }),
 };

@@ -13,7 +13,7 @@ export default function HomeClient() {
   const [heroTab, setHeroTab] = useState('Popular in AI');
   const carouselRef = useRef<HTMLDivElement>(null);
   const latestArticlesRef = useRef<HTMLDivElement>(null);
-  const sortedArticles = [...articles].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const sortedArticles = [...articles].filter(a => a.status !== 'draft').sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const featuredArticle = getFeaturedArticle();
   const trendingArticle = sortedArticles.reduce((max, a) => (a.commentCount > max.commentCount ? a : max), sortedArticles[0]);
   const heroArticle = heroTab === 'Trending' ? trendingArticle : featuredArticle;

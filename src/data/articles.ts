@@ -24,6 +24,7 @@ export interface Article {
   commentCount: number;
   featured?: boolean;
   faq?: FAQ[];
+  status?: 'published' | 'draft';
 }
 
 export const categories = [
@@ -78,6 +79,7 @@ export const articles: Article[] = [
     ],
     commentCount: 42,
     featured: true,
+    status: 'published',
     faq: [
       {
         question: 'How do I set up DeepSeek on Janitor AI?',
@@ -150,6 +152,7 @@ export const articles: Article[] = [
       'eu ai act news today',
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: 'What is the EU AI Act?',
@@ -212,6 +215,7 @@ export const articles: Article[] = [
       'does cybersecurity require coding',
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: 'Will AI replace cybersecurity engineers?',
@@ -279,6 +283,7 @@ export const articles: Article[] = [
       'when was virtual reality invented',
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: 'Is virtual reality bad for your eyes?',
@@ -331,6 +336,7 @@ export const articles: Article[] = [
       'blockchain keywords',
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: 'How is blockchain used in intellectual property?',
@@ -391,6 +397,7 @@ export const articles: Article[] = [
       'hotwire gaio.tech ai visibility products'
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: "How do I optimize for AI Search Engines?",
@@ -438,6 +445,7 @@ export const articles: Article[] = [
       'self hosted free staffing agency recruitment opensource'
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: 'What is software automation in an enterprise context?',
@@ -482,6 +490,7 @@ export const articles: Article[] = [
       'disclosure sentiment: machine learning vs. dictionary methods.'
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: 'What is the difference between hypertension prediction using machine learning on Kaggle versus in production?',
@@ -523,6 +532,7 @@ export const articles: Article[] = [
       'droven.io technology blog'
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: 'What is the most significant shift in HR tech news today?',
@@ -565,6 +575,7 @@ export const articles: Article[] = [
       'what new technology is coming scookietech'
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: 'What is new in gaming technology according to platforms like jogametech?',
@@ -587,8 +598,8 @@ export const articles: Article[] = [
     excerpt: 'An opinionated systems-level comparison of 2026’s top AI chatbots. Learn which tool excels at coding, complex reasoning, and long-context processing.',
     metaDescription: 'Compare the best AI chatbots in 2026: ChatGPT, Claude, Gemini, and Grok. Get benchmark results, cost analysis, and expert workflow recommendations.',
     category: 'Tech Trends',
-    date: 'May 26, 2026',
-    lastUpdated: 'May 26, 2026',
+    date: 'May 20, 2026',
+    lastUpdated: 'May 20, 2026',
     readTime: '12 min',
     author: AUTHOR.name,
     authorBio: AUTHOR.bio,
@@ -607,6 +618,7 @@ export const articles: Article[] = [
       'can gemini replace chatgpt'
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: 'What are the best AI chatbots in 2026?',
@@ -637,8 +649,8 @@ export const articles: Article[] = [
     excerpt: 'Master Anthropic\'s Claude AI platform. Learn how to leverage Projects, build interactive Artifacts, and write high-utility system prompts.',
     metaDescription: 'Complete beginner\'s guide on how to use Claude AI. Master Projects, Artifacts, file uploads, and Anthropic\'s unique prompting formula.',
     category: 'Engineering',
-    date: 'May 28, 2026',
-    lastUpdated: 'May 28, 2026',
+    date: 'May 22, 2026',
+    lastUpdated: 'May 22, 2026',
     readTime: '9 min',
     author: AUTHOR.name,
     authorBio: AUTHOR.bio,
@@ -656,6 +668,7 @@ export const articles: Article[] = [
       'best ai tools for longer text projects'
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: 'How do I start using Claude AI?',
@@ -686,8 +699,8 @@ export const articles: Article[] = [
     excerpt: 'Move beyond basic prompts. Learn how to configure Custom Instructions, isolate system context, and prevent model hallucinations in production.',
     metaDescription: 'Learn how to use ChatGPT effectively with advanced prompting frameworks, custom instructions, custom GPTs, and factual grounding rules.',
     category: 'Engineering',
-    date: 'May 30, 2026',
-    lastUpdated: 'May 30, 2026',
+    date: 'May 24, 2026',
+    lastUpdated: 'May 24, 2026',
     readTime: '10 min',
     author: AUTHOR.name,
     authorBio: AUTHOR.bio,
@@ -705,6 +718,7 @@ export const articles: Article[] = [
       'does chatgpt free tier include image generation'
     ],
     commentCount: 0,
+    status: 'published',
     faq: [
       {
         question: 'How do I use ChatGPT effectively in a professional setting?',
@@ -727,16 +741,142 @@ export const articles: Article[] = [
         answer: 'Force the model to ground its responses by adding instructions like "Cite sources or say \'I don\'t know\' if you cannot find factual evidence," or use the "think step-by-step" technique to encourage logical reasoning before presenting a final answer.'
       }
     ]
+  },
+  {
+    id: 14,
+    slug: 'best-free-ai-tools',
+    title: 'Best Free AI Tools in 2026 (No Subscription Required)',
+    excerpt: 'Ditch the monthly subscription creep. An opinionated, systems-grade review of the high-value AI platforms offering genuine free tiers, local offline hosting parameters, and open developer access.',
+    metaDescription: 'Discover the best free AI tools in 2026. Hand-tested platforms for text, coding, and image generation that offer completely free tiers with no hidden credit card requirements.',
+    category: 'Engineering',
+    date: 'May 25, 2026',
+    readTime: '10 min',
+    author: AUTHOR.name,
+    authorBio: AUTHOR.bio,
+    authorAvatar: AUTHOR.avatar,
+    authorLinkedin: AUTHOR.linkedin,
+    authorTwitter: AUTHOR.twitter,
+    authorPage: AUTHOR.page,
+    image: '/images/blog/best-free-ai-tools.webp',
+    imageAlt: 'Visual dashboard listing free and open-source local AI model runners',
+    keywords: ['best free ai tools', 'free ai tools 2026', 'best free ai tools no subscription'],
+    commentCount: 0,
+    status: 'published',
+    faq: [
+      {
+        question: 'Are these AI tools completely free or just free trials?',
+        answer: 'All tools listed in this guide offer genuine, permanent free-to-use tiers or are 100% open-source local binaries (like Ollama) that generate zero ongoing SaaS subscription charges.'
+      },
+      {
+        question: 'How do I run an advanced AI model locally on my laptop for free?',
+        answer: 'You can download Ollama or LM Studio, fetch an optimized open-weights GGUF model (such as DeepSeek-R1 or Llama-3.1), and run inference completely offline on your device with no API charges.'
+      }
+    ]
+  },
+  {
+    id: 15,
+    slug: 'perplexity-vs-google',
+    title: 'Why Are Developers Switching from Google to This Free Browser',
+    excerpt: 'An autopsy of modern search engine optimization spam. Why veterans are shifting query workflows away from commercial indexes and configuring Perplexity RAG synthesizers for documentation crawls.',
+    metaDescription: 'Why are developers switching from Google to Perplexity? A technical breakdown of SEO web spam, live RAG synthesis, and custom browser keyword search engine configurations.',
+    category: 'Engineering',
+    date: 'May 27, 2026',
+    readTime: '9 min',
+    author: AUTHOR.name,
+    authorBio: AUTHOR.bio,
+    authorAvatar: AUTHOR.avatar,
+    authorLinkedin: AUTHOR.linkedin,
+    authorTwitter: AUTHOR.twitter,
+    authorPage: AUTHOR.page,
+    image: '/images/blog/how-to-use-claude-ai.webp',
+    imageAlt: 'Perplexity AI and Google conversational search results compared side by side',
+    keywords: ['perplexity vs google', 'is perplexity better than google', 'perplexity ai explained'],
+    commentCount: 0,
+    status: 'draft',
+    faq: [
+      {
+        question: 'Why is Perplexity better than Google for software developers?',
+        answer: 'Perplexity uses Retrieval-Augmented Generation (RAG) to search, fetch, and synthesize documentation directly into structured markdown code blocks, bypassing search engine optimization spam pages.'
+      },
+      {
+        question: 'How do I make Perplexity my default search tool in Google Chrome?',
+        answer: 'Go to Chrome Settings -> Search Engines -> Manage Search Engines. Add Perplexity with URL string https://www.perplexity.ai/search?q=%s and configure a quick keyword shortcut like p.'
+      }
+    ]
+  },
+  {
+    id: 16,
+    slug: 'deepseek-vs-chatgpt',
+    title: 'How China Is Secretly Winning the AI Race with Free AI',
+    excerpt: 'The economics of the DeepSeek disruption. An architectural investigation of Multi-head Latent Attention (MLA), DeepSeekMoE routing, R1 thinking pathways, and a 99% API cost collapse.',
+    metaDescription: 'How China is winning the AI race: DeepSeek vs ChatGPT. Technical audit of MLA latent memory, R1 reinforcement learning thinking, and API pricing comparison.',
+    category: 'AI Research',
+    date: 'May 29, 2026',
+    readTime: '11 min',
+    author: AUTHOR.name,
+    authorBio: AUTHOR.bio,
+    authorAvatar: AUTHOR.avatar,
+    authorLinkedin: AUTHOR.linkedin,
+    authorTwitter: AUTHOR.twitter,
+    authorPage: AUTHOR.page,
+    image: '/images/blog/how-to-use-chatgpt-effectively.webp',
+    imageAlt: 'DeepSeek R1 model thinking path flowchart visualization',
+    keywords: ['deepseek vs chatgpt', 'is deepseek better than chatgpt', 'deepseek r1 model'],
+    commentCount: 0,
+    status: 'draft',
+    faq: [
+      {
+        question: 'What makes DeepSeek V3 and R1 so much cheaper to run?',
+        answer: 'DeepSeek introduced Multi-head Latent Attention (MLA) which compresses Key-Value (KV) cache requirements by up to 93%, alongside specialized MoE routing to invoke only 37B active parameters per token.'
+      },
+      {
+        question: 'Does DeepSeek R1 actually match GPT-4o in reasoning tasks?',
+        answer: 'Yes, benchmarks show DeepSeek R1 performs at parity with OpenAI o1 and o1-pro on mathematics, coding, and logical reasoning tests, but at a 99% cheaper pricing tier.'
+      }
+    ]
+  },
+  {
+    id: 17,
+    slug: 'grok-ai-world-richest-man',
+    title: 'The AI Created by the World\'s Richest Man',
+    excerpt: 'Evaluating xAI Colossus. Inside Grok\'s real-time X social data crawler, the Memphis hardware cluster specifications, and a veteran engineer\'s perspective on cloud incident response times.',
+    metaDescription: 'Grok AI review: Technical autopsy of xAI Colossus training hardware, X social network real-time data crawling pipelines, and coding benchmark analysis.',
+    category: 'Tech Trends',
+    date: 'May 31, 2026',
+    readTime: '9 min',
+    author: AUTHOR.name,
+    authorBio: AUTHOR.bio,
+    authorAvatar: AUTHOR.avatar,
+    authorLinkedin: AUTHOR.linkedin,
+    authorTwitter: AUTHOR.twitter,
+    authorPage: AUTHOR.page,
+    image: '/images/blog/best-ai-chatbots.webp',
+    imageAlt: 'Supercomputing cluster representing xAI Memphis Colossus pipeline',
+    keywords: ['grok ai', 'what is grok ai', 'xai colossus memphis'],
+    commentCount: 0,
+    status: 'draft',
+    faq: [
+      {
+        question: 'How does Grok AI get real-time news information?',
+        answer: 'Grok has unique, native API-level access to the X platform database, crawling posts, threads, and links as they are published to extract breaking social updates.'
+      },
+      {
+        question: 'Is Grok AI good at coding and software engineering tasks?',
+        answer: 'Grok is highly competent for standard scripting, but testing indicates Claude 3.5 Sonnet still maintains a superior logical edge for multi-file system refactoring.'
+      }
+    ]
   }
 ];
 
 export function getFeaturedArticle(): Article {
-  return articles.find((a) => a.featured) || articles[0];
+  const active = articles.filter(a => a.status !== 'draft');
+  return active.find((a) => a.featured) || active[0];
 }
 
 export function getArticlesByCategory(category: string): Article[] {
-  if (category === 'All') return articles;
-  return articles.filter((a) => a.category === category);
+  const active = articles.filter(a => a.status !== 'draft');
+  if (category === 'All') return active;
+  return active.filter((a) => a.category === category);
 }
 
 export function getArticleBySlug(slug: string): Article | undefined {
@@ -748,13 +888,14 @@ export function getRelatedArticles(
   count: number = 3
 ): Article[] {
   const current = getArticleBySlug(currentSlug);
-  if (!current) return articles.slice(0, count);
-  const sameCategory = articles.filter(
+  const active = articles.filter(a => a.status !== 'draft');
+  if (!current) return active.slice(0, count);
+  const sameCategory = active.filter(
     (a) => a.slug !== currentSlug && a.category === current.category
   );
   if (sameCategory.length >= count) return sameCategory.slice(0, count);
   // Fill with other articles if not enough in same category
-  const others = articles.filter(
+  const others = active.filter(
     (a) => a.slug !== currentSlug && a.category !== current.category
   );
   return [...sameCategory, ...others].slice(0, count);
