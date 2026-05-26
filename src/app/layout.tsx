@@ -87,6 +87,11 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Popunder Ad Network script */}
+        <Script
+          src="https://pl29556323.effectivecpmnetwork.com/0b/1d/0b/0b1d0b69c15592fe37c78f80a8bf608f.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body
         className="min-h-full flex flex-col antialiased overflow-x-hidden"
