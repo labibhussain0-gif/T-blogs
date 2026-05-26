@@ -157,7 +157,7 @@ export default function AboutClient() {
                 lineHeight: 2,
               }}
             >
-              <div style={{ color: 'var(--accent-orange)', fontWeight: 700, marginBottom: '16px' }}>// principles.ts</div>
+              <div style={{ color: 'var(--accent-orange)', fontWeight: 700, marginBottom: '16px' }}>{"// principles.ts"}</div>
               <div><span style={{ color: 'var(--ink-tertiary)' }}>const</span> <span style={{ color: 'var(--ink-primary)' }}>VOICE</span> = {'{'}</div>
               <div style={{ paddingLeft: '20px' }}>
                 <div>tone: <span style={{ color: '#22C55E' }}>&quot;answer-first&quot;</span>,</div>
@@ -246,6 +246,78 @@ export default function AboutClient() {
                 </p>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Editorial Standards */}
+      <section
+        style={{
+          background: 'var(--bg-warm-gray)',
+          borderTop: '1px solid var(--border-light)',
+          borderBottom: '1px solid var(--border-light)',
+          padding: '80px 24px',
+        }}
+      >
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <span
+              style={{
+                display: 'inline-block',
+                fontSize: '12px',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                color: 'var(--accent-orange)',
+                fontFamily: 'var(--font-body)',
+                marginBottom: '16px',
+              }}
+            >
+              Rigorous Quality
+            </span>
+            <h2
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontWeight: 700,
+                fontSize: 'clamp(1.375rem, 3.5vw, 2.25rem)',
+                color: 'var(--ink-primary)',
+                marginBottom: '16px',
+              }}
+            >
+              Editorial Standards
+            </h2>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: 'var(--ink-secondary)', lineHeight: 1.7 }}>
+              At T-blogs, our integrity rests on technical precision. We do not publish generic content or regurgitated documentation. Every piece of analysis, tutorial, and guide adheres to strict standards of technical excellence.
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+            <div style={{ background: 'var(--bg-white)', padding: '28px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-light)' }}>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px', color: 'var(--ink-primary)', marginBottom: '10px' }}>
+                1. Absolute Technical Accuracy & Verification
+              </h3>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--ink-secondary)', lineHeight: 1.7, margin: 0 }}>
+                Every code snippet, configuration block, and architectural blueprint is rigorously tested and verified in isolated sandboxes before publication. We ensure every command runs, every dependency resolves, and every optimization behaves exactly as claimed.
+              </p>
+            </div>
+
+            <div style={{ background: 'var(--bg-white)', padding: '28px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-light)' }}>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px', color: 'var(--ink-primary)', marginBottom: '10px' }}>
+                2. Peer Review by Systems Architects
+              </h3>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--ink-secondary)', lineHeight: 1.7, margin: 0 }}>
+                Complex systems designs and framework evaluations undergo a robust peer-review process conducted by senior systems architects and industry practitioners. We audit technical claims and challenge assumptions to eliminate edge cases and configuration traps before they reach your terminal.
+              </p>
+            </div>
+
+            <div style={{ background: 'var(--bg-white)', padding: '28px', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-light)' }}>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px', color: 'var(--ink-primary)', marginBottom: '10px' }}>
+                3. Zero Tolerance for AI Slop & Boilerplate
+              </h3>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--ink-secondary)', lineHeight: 1.7, margin: 0 }}>
+                We maintain an absolute, zero-tolerance policy for AI-generated fluff, repetitive boilerplate slop, and low-effort summaries. We do not use LLMs to draft prose or insert generic marketing filler. Every word is authored by real humans with deep hands-on expertise, focused strictly on solving technical problems.
+              </p>
+            </div>
           </div>
         </div>
       </section>

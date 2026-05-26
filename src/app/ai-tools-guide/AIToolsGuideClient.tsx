@@ -50,7 +50,7 @@ const TOOLS_DATA: AITool[] = [
     proTips: 'Configure DeepSeek R1 directly inside roleplay platforms or local clients by supplying their OpenAI-compatible endpoint URL.',
     pricing: 'Free web tier | Pay-as-you-go API',
     badge: 'Best Value Reasoning',
-    readMoreLink: '/blog/deepseek-janitor-ai',
+    readMoreLink: '/blog/deepseek-vs-chatgpt',
     specs: [
       { label: 'Base API URL', value: 'api.deepseek.com/v1' },
       { label: 'Best For', value: 'Low-cost Advanced API' },
@@ -63,7 +63,7 @@ const TOOLS_DATA: AITool[] = [
     proTips: 'Optimize your site\'s semantic structured schema and maintain a clean llms.txt folder to be prominently cited in their search results.',
     pricing: 'Free tier | Pro: $20/mo',
     badge: 'Research King',
-    readMoreLink: '/blog/best-ai-chatbots',
+    readMoreLink: '/blog/perplexity-vs-google',
     specs: [
       { label: 'Core Mechanism', value: 'Generative Engine' },
       { label: 'Best For', value: 'Real-time Fact Finding' },
@@ -88,6 +88,7 @@ const TOOLS_DATA: AITool[] = [
     proTips: 'Run "ollama run deepseek-r1:8b" in your terminal to establish a completely private, offline reasoning workspace on your laptop.',
     pricing: '100% Free & Open Source',
     badge: 'Local Sovereignty',
+    readMoreLink: '/blog/best-free-ai-tools',
     specs: [
       { label: 'Installation', value: 'Local Command Line' },
       { label: 'Privacy Status', value: '100% Offline' },

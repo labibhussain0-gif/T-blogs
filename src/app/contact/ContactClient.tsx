@@ -77,11 +77,21 @@ export default function ContactClient() {
                   <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--accent-orange)', textDecoration: 'none' }}>T-blogs on LinkedIn</a>
                 </div>
               </div>
+              {/* Geography / Lab */}
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                <div style={{ width: '40px', height: '40px', borderRadius: 'var(--radius-md)', background: 'var(--bg-warm-gray)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a8 8 0 00-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 00-8-8z" /><circle cx="12" cy="10" r="3" /></svg>
+                </div>
+                <div>
+                  <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '14px', color: 'var(--ink-primary)', marginBottom: '4px' }}>Geography</p>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--ink-secondary)', margin: 0 }}>Operating out of London, UK / New York, USA virtual research lab.</p>
+                </div>
+              </div>
             </div>
 
             <div style={{ marginTop: '40px', padding: '24px', borderRadius: 'var(--radius-md)', background: 'var(--bg-warm-gray)', border: '1px solid var(--border-light)' }}>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--ink-secondary)', lineHeight: 1.7, margin: 0 }}>
-                <strong style={{ color: 'var(--ink-primary)' }}>Response time:</strong> We typically respond within 48 hours. For collaboration or sponsorship inquiries, include as much detail as possible.
+                <strong style={{ color: 'var(--ink-primary)' }}>Response time:</strong> We typically respond within 24 business hours. For collaboration or sponsorship inquiries, include as much detail as possible.
               </p>
             </div>
           </div>
@@ -97,7 +107,7 @@ export default function ContactClient() {
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12" /></svg>
                   </div>
                   <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.25rem', color: 'var(--ink-primary)', marginBottom: '8px' }}>Message sent!</p>
-                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--ink-secondary)' }}>Your email client should have opened. We&apos;ll get back to you within 48 hours.</p>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--ink-secondary)' }}>Your email client should have opened. We&apos;ll get back to you within 24 business hours.</p>
                 </div>
               ) : (
                 <form ref={formRef} onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

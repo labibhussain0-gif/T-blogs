@@ -38,7 +38,7 @@ export const categories = [
 // Author constants — single source of truth
 export const AUTHOR = {
   name: 'Ashique Hussain',
-  bio: 'Tech writer and AI researcher who covers large language models, cybersecurity, and emerging tech. Former software engineer with a deep interest in how AI reshapes the industry.',
+  bio: 'Systems engineer with a B.Sc. in Computer Science & Engineering. Experienced in scaling high-availability PostgreSQL clusters, container security, and low-latency AI retrieval networks.',
   avatar: '/author-ashique.jpg',
   linkedin: 'https://www.linkedin.com/in/ashique-hussain-a94738406',
   twitter: 'https://x.com/MrMilli7',
@@ -84,7 +84,7 @@ export const articles: Article[] = [
       {
         question: 'How do I set up DeepSeek on Janitor AI?',
         answer:
-          'Go to Janitor AI settings, select Custom API (OpenAI-compatible), enter the base URL as https://api.deepseek.com/v1, paste your DeepSeek API key, and set the model name to deepseek-chat. Save and test the connection.',
+          'Go to Janitor AI settings, select Custom API (OpenAI-compatible), enter the base URL as https://api.deepseek.com/v1, paste your DeepSeek API key, and set the model name to deepseek-v4-flash. Save and test the connection.',
       },
       {
         question: 'What is the correct DeepSeek API base URL for Janitor AI?',
@@ -102,9 +102,9 @@ export const articles: Article[] = [
           'OpenRouter is the standard, easiest alternative for normal users. It handles geographic routing issues, accepts standard credit cards more easily, and provides failovers. Direct DeepSeek API is cheaper but requires prepaying and can suffer from rate limits during peak hours.',
       },
       {
-        question: 'Which DeepSeek model should I use on Janitor AI: V3 or R1?',
+        question: 'Which DeepSeek model should I use on Janitor AI: V4 Flash or V4 Pro (Thinking)?',
         answer:
-          'Always use DeepSeek V3 (deepseek-chat) for Janitor AI roleplay. DeepSeek R1 (Reasoner) outputs raw <think> tags containing its internal monologue, which breaks character immersion and does not parse cleanly in Janitor’s interface.',
+          'Always use DeepSeek V4 Flash (deepseek-v4-flash) for Janitor AI roleplay. DeepSeek V4 Pro (Thinking) outputs raw <think> tags containing its internal monologue, which breaks character immersion and does not parse cleanly in Janitor’s interface.',
       },
       {
         question: 'Is DeepSeek free to use on Janitor AI?',
@@ -114,7 +114,7 @@ export const articles: Article[] = [
       {
         question: 'What temperature and token settings work best for DeepSeek on Janitor AI?',
         answer:
-          'Start with temperature 0.7, top-p 0.9, and max tokens 2048–4096. Increase temperature to 0.85 if the responses feel too rigid. Avoid setting max tokens below 1024 or responses may cut off mid-sentence.',
+          'Start with temperature 1.0–1.3, top-p 1.0, and max tokens 2048–4096. Setting the temperature to 1.1 or 1.2 is a solid sweet spot for creative and engaging storytelling. Setting top-p to 1.0 ensures optimal creativity and coherence.',
       },
     ],
   },
@@ -792,7 +792,7 @@ export const articles: Article[] = [
     imageAlt: 'Perplexity AI and Google conversational search results compared side by side',
     keywords: ['perplexity vs google', 'is perplexity better than google', 'perplexity ai explained'],
     commentCount: 0,
-    status: 'draft',
+    status: 'published',
     faq: [
       {
         question: 'Why is Perplexity better than Google for software developers?',
@@ -823,7 +823,7 @@ export const articles: Article[] = [
     imageAlt: 'DeepSeek R1 model thinking path flowchart visualization',
     keywords: ['deepseek vs chatgpt', 'is deepseek better than chatgpt', 'deepseek r1 model'],
     commentCount: 0,
-    status: 'draft',
+    status: 'published',
     faq: [
       {
         question: 'What makes DeepSeek V3 and R1 so much cheaper to run?',
@@ -854,7 +854,7 @@ export const articles: Article[] = [
     imageAlt: 'Supercomputing cluster representing xAI Memphis Colossus pipeline',
     keywords: ['grok ai', 'what is grok ai', 'xai colossus memphis'],
     commentCount: 0,
-    status: 'draft',
+    status: 'published',
     faq: [
       {
         question: 'How does Grok AI get real-time news information?',

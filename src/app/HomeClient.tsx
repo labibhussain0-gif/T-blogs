@@ -1,10 +1,11 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 import ArticleCard from '@/components/ArticleCard';
 import CategoryTabs from '@/components/CategoryTabs';
 import NewsletterForm from '@/components/NewsletterForm';
-import { articles, getFeaturedArticle, getArticlesByCategory } from '@/data/articles';
+import { articles, getFeaturedArticle } from '@/data/articles';
 
 const filterCategories = ['All', 'AI Research', 'Engineering', 'Tech Trends', 'Design', 'AI Tools Guide'];
 
@@ -41,6 +42,9 @@ export default function HomeClient() {
           padding: '48px 24px 64px',
         }}
       >
+        <h1 className="sr-only">
+          T-blogs: Systems-Grade Software Engineering Blueprints, AI Research, and Self-Hosted Infrastructure Guides
+        </h1>
         {/* Category Label */}
         <div className="flex flex-wrap items-center gap-4 mb-8 pb-4 border-b border-[var(--border-light)]">
           <span
@@ -132,7 +136,7 @@ export default function HomeClient() {
 
         {/* See All */}
         <div style={{ textAlign: 'center', marginTop: '48px' }}>
-          <a
+          <Link
             href="/blog"
             style={{
               fontFamily: 'var(--font-body)',
@@ -152,7 +156,7 @@ export default function HomeClient() {
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
             </svg>
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -182,7 +186,7 @@ export default function HomeClient() {
             >
               Must Read
             </h2>
-            <a
+            <Link
               href="/blog"
               style={{
                 fontFamily: 'var(--font-body)',
@@ -199,7 +203,7 @@ export default function HomeClient() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="9 18 15 12 9 6" />
               </svg>
-            </a>
+            </Link>
           </div>
 
           {/* Asymmetric Grid */}
@@ -208,7 +212,7 @@ export default function HomeClient() {
             <div className="lg:col-span-3">
               {mustReadArticles[0] && (
                 <article className="group relative overflow-hidden h-full" style={{ borderRadius: 'var(--radius-lg)', minHeight: '420px' }}>
-                  <a href={`/blog/${mustReadArticles[0].slug}`} aria-label={`Read ${mustReadArticles[0].title}`}>
+                  <Link href={`/blog/${mustReadArticles[0].slug}`} aria-label={`Read ${mustReadArticles[0].title}`}>
                     <span className="sr-only">{mustReadArticles[0].title}</span>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
@@ -284,7 +288,7 @@ export default function HomeClient() {
                         </span>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </article>
               )}
             </div>

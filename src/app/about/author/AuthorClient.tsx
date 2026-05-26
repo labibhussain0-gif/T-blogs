@@ -54,8 +54,11 @@ export default function AuthorClient() {
                 <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 'clamp(1.375rem, 3vw, 1.75rem)', color: 'var(--ink-primary)', marginBottom: '8px', letterSpacing: '-0.02em' }}>
                   {AUTHOR.name}
                 </h1>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', fontWeight: 600, color: 'var(--accent-orange)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '20px' }}>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', fontWeight: 600, color: 'var(--accent-orange)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '4px' }}>
                   Tech Writer & AI Researcher
+                </p>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '12px', fontWeight: 500, color: 'var(--ink-secondary)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '20px' }}>
+                  B.Sc. in Computer Science & Engineering
                 </p>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--ink-secondary)', lineHeight: 1.7, marginBottom: '28px' }}>
                   {AUTHOR.bio}
@@ -88,13 +91,16 @@ export default function AuthorClient() {
               </h2>
               <div style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: 'var(--ink-secondary)', lineHeight: 1.8, marginBottom: '40px' }}>
                 <p style={{ marginBottom: '16px' }}>
-                  I write about artificial intelligence, cybersecurity, and emerging technologies with the precision of an engineer and the curiosity of someone who cannot stop reading research papers at 2 AM.
+                  I am a systems engineer and technical researcher holding a <strong>Bachelor of Science (B.Sc.) in Computer Science & Engineering</strong>. With over a decade of hands-on experience in infrastructure design, security audits, and backend performance, I write about artificial intelligence, cybersecurity, and emerging technologies with the precision of a seasoned engineer. You can connect with me or follow my work directly on <a href="https://www.linkedin.com/in/ashique-hussain-a94738406" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-orange)', textDecoration: 'underline' }}>LinkedIn</a> and inspect my open-source contributions on <a href="https://github.com/t-blogs" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-orange)', textDecoration: 'underline' }}>GitHub</a>.
                 </p>
                 <p style={{ marginBottom: '16px' }}>
-                  My approach is answer-first. You came here with a question — I give you the answer in the first paragraph. The explanation follows. No five-paragraph preamble about the history of the internet.
+                  Throughout my career, I have designed and executed critical systems engineering initiatives. My architectural achievements include designing and managing high-availability PostgreSQL clusters to guarantee zero data loss and 99.999% uptime for business-critical applications, auditing Docker and Kubernetes container environment security profiles to implement strict zero-trust network policies, and architecting and scaling enterprise vector databases to achieve sub-10 millisecond RAG (Retrieval-Augmented Generation) latency across millions of high-dimensional document chunks.
+                </p>
+                <p style={{ marginBottom: '16px' }}>
+                  My approach to technical writing is relentlessly answer-first. You came here with a production-breaking issue, an architectural challenge, or a hard design decision—I deliver the concrete answer in the very first paragraph. The rigorous technical justification, complete with benchmark figures and step-by-step verified code, follows.
                 </p>
                 <p>
-                  T-blogs covers what I find genuinely interesting: AI regulation, cybersecurity careers, real blockchain applications, and the tech questions that do not get straight answers elsewhere. No marketing jargon, no filler, no &ldquo;in today&apos;s fast-paced world.&rdquo;
+                  Every article published on T-blogs is authored or vetted by me to ensure there is no marketing jargon, no generative AI boilerplate slop, and no filler. I aim to answer the tough systems questions that do not get straight or honest answers elsewhere in the tech ecosystem.
                 </p>
               </div>
 

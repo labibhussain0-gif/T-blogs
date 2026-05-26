@@ -6,9 +6,9 @@ export const SITE_NAME = 'T-blogs';
 export const SITE_DESCRIPTION =
   'High-end technology and AI blog featuring the latest in software engineering, artificial intelligence, and tech trends.';
 export const CONTACT_EMAIL = 'labibhussain36@gmail.com';
-export const TWITTER_HANDLE = '@friendlybuddy25';
-export const LINKEDIN_URL = 'https://www.linkedin.com/in/mr-milli-098a35266';
-export const TWITTER_URL = 'https://x.com/friendlybuddy25';
+export const TWITTER_HANDLE = '@MrMilli7';
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/ashique-hussain-a94738406';
+export const TWITTER_URL = 'https://x.com/MrMilli7';
 
 // --- Types ---
 

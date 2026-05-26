@@ -11,6 +11,10 @@ T-blogs explores the intersection of software architecture, cybersecurity, and a
 - [Will Cybersecurity Be Replaced by AI?](https://tblogs.site/blog/will-cybersecurity-be-replaced-by-ai): Explores log parsing vs. architecture, prompt injection, and why human-in-the-loop matters.
 - [Is Virtual Reality Bad for Your Eyes?](https://tblogs.site/blog/is-virtual-reality-bad-for-your-eyes): Analyzes the vergence-accommodation conflict in modern VR headsets.
 - [Blockchain in Intellectual Property](https://tblogs.site/blog/blockchain-intellectual-property): Discusses the difference between immutable timestamping (Merkle trees) and legal IP enforcement.
+- [Why Are Developers Switching from Google to Perplexity](https://tblogs.site/blog/perplexity-vs-google): A technical breakdown of SEO web spam, live RAG synthesis, and custom site search engine configurations.
+- [How China Is Secretly Winning the AI Race](https://tblogs.site/blog/deepseek-vs-chatgpt): Economic and latent attention analysis comparing DeepSeek R1 reasoning vs. ChatGPT.
+- [The AI Created by the World's Richest Man](https://tblogs.site/blog/grok-ai-world-richest-man): Evaluating xAI Colossus pipelines, training hardware footprints, and real-time social RAG.
+- [Best Free AI Tools in 2026](https://tblogs.site/blog/best-free-ai-tools): Zero-subscription developer AI tools spanning local models, spaces, and free API credit layers.
 
 ## Sitemaps and Crawling
 - Homepage: https://tblogs.site

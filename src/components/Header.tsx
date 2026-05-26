@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import SearchOverlay from './SearchOverlay';
 import MobileMenu from './MobileMenu';
+import { AUTHOR } from '@/data/articles';
 
 const categoryLinks = [
   { href: '/blog?category=AI+Research', label: 'AI Research' },
@@ -212,10 +213,10 @@ export default function Header() {
 
             {/* Social Icons (desktop) */}
             <div className="hidden lg:flex items-center gap-1">
-              <SocialIcon label="Twitter" href="https://x.com/friendlybuddy25">
+              <SocialIcon label="Twitter" href={AUTHOR.twitter}>
                 <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
               </SocialIcon>
-              <SocialIcon label="LinkedIn" href="https://www.linkedin.com/in/mr-milli-098a35266">
+              <SocialIcon label="LinkedIn" href={AUTHOR.linkedin}>
                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
                 <rect x="2" y="9" width="4" height="12" />
                 <circle cx="4" cy="4" r="2" />

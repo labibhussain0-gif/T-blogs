@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import { AUTHOR } from '@/data/articles';
+import { CONTACT_EMAIL } from '@/lib/seo-helpers';
 
 export default function Footer() {
   return (
@@ -56,10 +58,10 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div style={{ display: 'flex', gap: '8px', marginTop: '24px' }}>
-              <FooterSocialIcon label="Twitter" href="https://x.com/friendlybuddy25">
+              <FooterSocialIcon label="Twitter" href={AUTHOR.twitter}>
                 <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
               </FooterSocialIcon>
-              <FooterSocialIcon label="LinkedIn" href="https://www.linkedin.com/in/mr-milli-098a35266">
+              <FooterSocialIcon label="LinkedIn" href={AUTHOR.linkedin}>
                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
                 <rect x="2" y="9" width="4" height="12" />
                 <circle cx="4" cy="4" r="2" />
@@ -67,7 +69,7 @@ export default function Footer() {
             </div>
             {/* Contact Email */}
             <a
-              href="mailto:labibhussain36@gmail.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '16px', fontSize: '13px', color: 'var(--footer-ink)', fontFamily: 'var(--font-body)', textDecoration: 'none', transition: 'color 0.2s ease' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-orange)')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--footer-ink)')}
@@ -75,7 +77,7 @@ export default function Footer() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2" /><path d="M2 7l10 7 10-7" />
               </svg>
-              labibhussain36@gmail.com
+              {CONTACT_EMAIL}
             </a>
           </div>
 
