@@ -90,12 +90,7 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
       />
-      {article.faq && article.faq.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(article.faq)) }}
-        />
-      )}
+
 
       <div className="max-w-[800px] mx-auto px-4 pt-8 pb-15 md:px-6 md:pt-12 md:pb-20">
         <nav aria-label="Breadcrumb" style={{ marginBottom: '32px', fontSize: '14px', fontWeight: 500, color: 'var(--ink-tertiary)' }}>
