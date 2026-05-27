@@ -826,12 +826,12 @@ export const articles: Article[] = [
     status: 'published',
     faq: [
       {
-        question: 'What makes DeepSeek V3 and R1 so much cheaper to run?',
-        answer: 'DeepSeek introduced Multi-head Latent Attention (MLA) which compresses Key-Value (KV) cache requirements by up to 93%, alongside specialized MoE routing to invoke only 37B active parameters per token.'
+        question: 'What makes DeepSeek V4 Pro and R1 so much cheaper to run?',
+        answer: 'DeepSeek introduced Multi-head Latent Attention (MLA) which compresses Key-Value (KV) cache requirements by up to 93%, alongside specialized MoE routing to invoke only 45B active parameters per token.'
       },
       {
-        question: 'Does DeepSeek R1 actually match GPT-4o in reasoning tasks?',
-        answer: 'Yes, benchmarks show DeepSeek R1 performs at parity with OpenAI o1 and o1-pro on mathematics, coding, and logical reasoning tests, but at a 99% cheaper pricing tier.'
+        question: 'Does DeepSeek R1 actually match GPT 5.5 in reasoning tasks?',
+        answer: 'Yes, benchmarks show DeepSeek R1 performs at parity with OpenAI o1, o3, and GPT 5.5 on mathematics, coding, and logical reasoning tests, but at a 99% cheaper pricing tier.'
       }
     ]
   },
