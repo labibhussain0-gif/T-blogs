@@ -94,32 +94,6 @@ export default function RootLayout({
       >
         <Header />
         <main className="flex-grow flex flex-col">{children}</main>
-        
-        {/* Global Banner Ad Spot */}
-        <div style={{ display: 'flex', justifyContent: 'center', margin: '24px auto', width: '100%', maxWidth: '320px', minHeight: '50px' }}>
-          <div id="container-33ace23177049a74fd1997dff69b0cea">
-            <Script
-              id="atOptions-banner"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.atOptions = {
-                    'key' : '33ace23177049a74fd1997dff69b0cea',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                  };
-                `,
-              }}
-            />
-            <Script
-              src="https://www.highperformanceformat.com/33ace23177049a74fd1997dff69b0cea/invoke.js"
-              strategy="afterInteractive"
-            />
-          </div>
-        </div>
-
         <Footer />
       </body>
     </html>

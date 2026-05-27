@@ -3,7 +3,6 @@ import { articleComponents } from '@/components/articles/registry';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import Script from 'next/script';
 import ArticleCard from '@/components/ArticleCard';
 import FAQSection from '@/components/FAQSection';
 import ShareButton from '../ShareButton';
@@ -136,16 +135,6 @@ export default async function BlogPostPage({ params }: Props) {
 
         <div className="prose-editorial" style={{ fontSize: '17px', lineHeight: 1.8, color: 'var(--ink-secondary)' }}>
           <BodyComponent />
-        </div>
-
-        {/* Native Banner Ad Spot (Post Bottom) */}
-        <div style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid var(--border-light)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <span style={{ fontSize: '11px', fontWeight: 600, color: 'var(--ink-tertiary)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>Sponsored Content</span>
-          <div id="container-87fb76ef6e9dc1474d33289808e924af" style={{ width: '100%', minHeight: '100px' }}></div>
-          <Script
-            src="https://pl29556331.effectivecpmnetwork.com/87fb76ef6e9dc1474d33289808e924af/invoke.js"
-            strategy="afterInteractive"
-          />
         </div>
       </div>
 
