@@ -4,7 +4,6 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import BottomAdBanner from "@/components/BottomAdBanner";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -95,7 +94,6 @@ export default function RootLayout({
       >
         <Header />
         <main className="flex-grow flex flex-col">{children}</main>
-        <BottomAdBanner />
         <Footer />
       </body>
     </html>
