@@ -5,7 +5,7 @@ import ArticleCard from '@/components/ArticleCard';
 import CategoryTabs from '@/components/CategoryTabs';
 import { getArticlesByCategory } from '@/data/articles';
 
-const filterCategories = ['All', 'AI Research', 'Engineering', 'Tech Trends', 'Design', 'AI Tools Guide'];
+const filterCategories = ['All', 'AI Research', 'Engineering', 'Tech Trends'];
 const ARTICLES_PER_PAGE = 6;
 
 export default function BlogClient() {

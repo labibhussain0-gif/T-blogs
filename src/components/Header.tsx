@@ -10,7 +10,6 @@ const categoryLinks = [
   { href: '/blog?category=AI+Research', label: 'AI Research' },
   { href: '/blog?category=Engineering', label: 'Engineering' },
   { href: '/blog?category=Tech+Trends', label: 'Tech Trends' },
-  { href: '/blog?category=Design', label: 'Design' },
   { href: '/ai-tools-guide', label: 'AI Tools Guide' },
 ];
 
