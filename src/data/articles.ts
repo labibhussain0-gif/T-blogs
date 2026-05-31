@@ -865,8 +865,54 @@ export const articles: Article[] = [
         answer: 'Grok is highly competent for standard scripting, but testing indicates Claude 3.5 Sonnet still maintains a superior logical edge for multi-file system refactoring.'
       }
     ]
+  },
+  {
+    id: 18,
+    slug: 'how-to-enable-memory-in-claude-code',
+    title: 'Why Claude Code Forgets Everything: How to Enable Persistent Memory Using a Free Gist',
+    excerpt: 'Tired of re-briefing Claude Code on your codebase every single session? Here is how to configure a permanent, self-documenting Git-backed LLM Wiki memory system in 5 minutes.',
+    metaDescription: 'Why does Claude Code forget everything between sessions? Complete guide to enabling persistent memory in Claude Code and Aider using Andrej Karpathy\'s LLM Wiki.',
+    category: 'Engineering',
+    date: 'May 31, 2026',
+    readTime: '11 min',
+    author: AUTHOR.name,
+    authorBio: AUTHOR.bio,
+    authorAvatar: AUTHOR.avatar,
+    authorLinkedin: AUTHOR.linkedin,
+    authorTwitter: AUTHOR.twitter,
+    authorPage: AUTHOR.page,
+    image: '/images/blog/claude-code-memory.webp',
+    imageAlt: 'Terminal CLI and Obsidian graph view representing the Claude Code memory system',
+    keywords: [
+      'how to enable memory in claude code',
+      'claude code persistent memory',
+      'why does claude code forget',
+      'karpathy llm wiki',
+      'cli coding agent memory'
+    ],
+    commentCount: 0,
+    status: 'published',
+    faq: [
+      {
+        question: 'Why does Claude Code forget everything between sessions?',
+        answer: 'Claude Code operates inside stateless shell processes. When you exit or restart a session, it loses the conversation context, forcing you to re-upload files or manually explain your project details again.'
+      },
+      {
+        question: 'How do I enable persistent memory in Claude Code?',
+        answer: 'You can build a permanent, Git-backed memory by setting up a dual-folder LLM Wiki structure (raw/ and wiki/) with a master index (index.md) and a chronological journal (log.md), guided by a system instruction prompt in your AGENTS.md file.'
+      },
+      {
+        question: 'Will the LLM Wiki blow up my Claude Code token usage?',
+        answer: 'No, it actually cuts your token usage by up to 95%. Instead of reading the entire codebase in every prompt, the agent progressively reads only the index and the specific wiki page required to answer your query.'
+      },
+      {
+        question: 'Is the LLM Wiki pattern compatible with other terminal coding CLIs like Aider?',
+        answer: 'Yes. Since it is written in flat, standard Markdown and managed through the CLI file interface, you can use the same LLM Wiki directory structure in Aider, Cursor, custom shell wrappers, or Aider\'s file-addition commands.'
+      }
+    ]
   }
 ];
+
 
 export function getFeaturedArticle(): Article {
   const active = articles.filter(a => a.status !== 'draft');

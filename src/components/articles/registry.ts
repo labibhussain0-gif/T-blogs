@@ -19,4 +19,5 @@ export const articleComponents: Record<string, React.ComponentType<any>> = {
   'perplexity-vs-google': dynamic(() => import('./perplexity-vs-google'), { ssr: true }),
   'deepseek-vs-chatgpt': dynamic(() => import('./deepseek-vs-chatgpt'), { ssr: true }),
   'grok-ai-world-richest-man': dynamic(() => import('./grok-ai-world-richest-man'), { ssr: true }),
+  'how-to-enable-memory-in-claude-code': dynamic(() => import('./how-to-enable-memory-in-claude-code'), { ssr: true }),
 };

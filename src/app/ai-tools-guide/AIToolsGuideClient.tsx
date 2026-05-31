@@ -210,7 +210,7 @@ export default function AIToolsGuideClient() {
     );
   };
 
-  const completedSpokesCount = 4;
+  const completedSpokesCount = 8;
   const selectedCount = selectedWeek2Slugs.length;
   const totalSpokes = 14;
   const totalCount = completedSpokesCount + selectedCount;
@@ -396,7 +396,11 @@ CRITICAL STANDARDS:
                       { title: 'ChatGPT vs Claude: 2026 Chatbot Battle', href: '/blog/best-ai-chatbots' },
                       { title: 'How to Use Claude AI: Technical Guide', href: '/blog/how-to-use-claude-ai' },
                       { title: 'How to Use ChatGPT Effectively: Tips', href: '/blog/how-to-use-chatgpt-effectively' },
-                      { title: 'Fixing DeepSeek Janitor AI Setup', href: '/blog/deepseek-janitor-ai' }
+                      { title: 'Fixing DeepSeek Janitor AI Setup', href: '/blog/deepseek-janitor-ai' },
+                      { title: 'Best Free AI Tools in 2026', href: '/blog/best-free-ai-tools' },
+                      { title: 'Why Developers Switch to Perplexity', href: '/blog/perplexity-vs-google' },
+                      { title: 'How China is Winning the AI Race', href: '/blog/deepseek-vs-chatgpt' },
+                      { title: 'Why Claude Code Forgets Everything (Memory)', href: '/blog/how-to-enable-memory-in-claude-code' }
                     ].map((spoke, idx) => (
                       <Link
                         key={idx}

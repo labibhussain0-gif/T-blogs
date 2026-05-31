@@ -162,6 +162,14 @@ export default function HowToUseClaudeAIBody() {
         I recently used this exact setup to refactor an entire Next.js static routing framework. By uploading the main routing registry and components in one step, I saved thousands of API tokens per prompt. Every chat thread opened within that Project automatically inherited the exact folder structures, meaning I never had to explain the layout context twice. It makes Claude one of the absolute <strong>best ai tools for longer text projects</strong>.
       </p>
 
+      <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.25rem', color: 'var(--ink-primary)', marginTop: '32px', marginBottom: '16px' }}>
+        Pro Tip: Stop Token Bleeding in CLI Sessions
+      </h3>
+      <p>
+        While Projects are excellent for browser-based context management, running command-line agents (like Claude Code) inside your terminal can quickly drain your API budget. Because CLI agents have stateless backends, they suffer from amnesia between sessions, forcing you to re-upload files repeatedly. To resolve this, you can configure a permanent, self-documenting memory loop. Read my step-by-step guide on <Link href="/blog/how-to-enable-memory-in-claude-code" style={{ color: 'var(--accent-orange)', textDecoration: 'underline', textUnderlineOffset: '3px', fontWeight: 600 }}>Why Claude Code Forgets Everything and How to Enable Memory</Link> to deploy this pattern in under 5 minutes.
+      </p>
+
+
       <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.75rem', color: 'var(--ink-primary)', marginTop: '48px', marginBottom: '20px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
         Claude Artifacts: Real-Time Development Windows
       </h2>
