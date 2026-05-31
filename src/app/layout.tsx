@@ -61,6 +61,11 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} ${jetbrainsMono.variable} h-full`}
     >
       <head>
+        {/* Preconnect Candidate Origins */}
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+
         {/* Google AdSense (Statically Injected for Crawler Detection) */}
         <script
           async

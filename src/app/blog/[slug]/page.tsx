@@ -130,7 +130,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         <div className="relative w-full aspect-[1376/768] md:h-[400px] md:aspect-auto mb-12 rounded-lg overflow-hidden">
-          <Image src={article.image} alt={article.imageAlt} fill priority sizes="(max-width: 768px) 100vw, 800px" className="object-cover" />
+          <Image src={article.image} alt={article.imageAlt} fill priority fetchPriority="high" sizes="(max-width: 768px) 100vw, 800px" className="object-cover" />
         </div>
 
         <div className="prose-editorial" style={{ fontSize: '17px', lineHeight: 1.8, color: 'var(--ink-secondary)' }}>

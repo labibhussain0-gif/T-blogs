@@ -6,26 +6,28 @@ import type { Article } from '@/data/articles';
 interface ArticleCardProps {
   article: Article;
   variant?: 'default' | 'compact' | 'featured' | 'horizontal';
+  priority?: boolean;
 }
 
 export default function ArticleCard({
   article,
   variant = 'default',
+  priority = false,
 }: ArticleCardProps) {
   if (variant === 'featured') {
-    return <FeaturedCard article={article} />;
+    return <FeaturedCard article={article} priority={priority} />;
   }
   if (variant === 'horizontal') {
-    return <HorizontalCard article={article} />;
+    return <HorizontalCard article={article} priority={priority} />;
   }
   if (variant === 'compact') {
-    return <CompactCard article={article} />;
+    return <CompactCard article={article} priority={priority} />;
   }
-  return <DefaultCard article={article} />;
+  return <DefaultCard article={article} priority={priority} />;
 }
 
 /* ===== Default Card ===== */
-function DefaultCard({ article }: { article: Article }) {
+function DefaultCard({ article, priority }: { article: Article; priority: boolean }) {
   return (
     <article className="group flex flex-col h-full relative">
       {/* Image */}
@@ -36,7 +38,8 @@ function DefaultCard({ article }: { article: Article }) {
           src={article.image}
           alt={article.title}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          loading="lazy"
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : undefined}
         />
         <div className="absolute top-3 left-3">
           <span
@@ -142,7 +145,7 @@ function DefaultCard({ article }: { article: Article }) {
 }
 
 /* ===== Featured Card (Hero) ===== */
-function FeaturedCard({ article }: { article: Article }) {
+function FeaturedCard({ article, priority }: { article: Article; priority: boolean }) {
   return (
     <article className="group grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
       {/* Left — Content */}
@@ -215,6 +218,8 @@ function FeaturedCard({ article }: { article: Article }) {
             src={article.image}
             alt={article.title}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : undefined}
           />
         </Link>
         {/* Metadata overlay */}
@@ -232,13 +237,13 @@ function FeaturedCard({ article }: { article: Article }) {
 }
 
 /* ===== Horizontal Card ===== */
-function HorizontalCard({ article }: { article: Article }) {
+function HorizontalCard({ article, priority }: { article: Article; priority: boolean }) {
   return (
     <article className="group flex gap-4 items-start relative">
       <Link href={`/blog/${article.slug}`} className="flex-shrink-0 relative overflow-hidden" style={{ width: '120px', height: '90px', borderRadius: 'var(--radius-sm)' }} aria-label={`Read ${article.title}`}>
         <span className="sr-only">{article.title}</span>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={article.image} alt={article.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+        <img src={article.image} alt={article.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : undefined} />
       </Link>
       <div className="flex-1 min-w-0">
         <span style={{ fontSize: '11px', color: 'var(--accent-orange)', fontWeight: 700, fontFamily: 'var(--font-body)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
@@ -261,13 +266,13 @@ function HorizontalCard({ article }: { article: Article }) {
 }
 
 /* ===== Compact Card ===== */
-function CompactCard({ article }: { article: Article }) {
+function CompactCard({ article, priority }: { article: Article; priority: boolean }) {
   return (
     <article className="group flex flex-col relative">
       <Link href={`/blog/${article.slug}`} className="block relative overflow-hidden mb-3" style={{ borderRadius: 'var(--radius-sm)', aspectRatio: '16/9' }} aria-label={`Read ${article.title}`}>
         <span className="sr-only">{article.title}</span>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={article.image} alt={article.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+        <img src={article.image} alt={article.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading={priority ? 'eager' : 'lazy'} fetchPriority={priority ? 'high' : undefined} />
       </Link>
       <span style={{ fontSize: '11px', color: 'var(--accent-orange)', fontWeight: 700, fontFamily: 'var(--font-body)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
         {article.category}

@@ -39,7 +39,7 @@ export const categories = [
 export const AUTHOR = {
   name: 'Ashique Hussain',
   bio: 'Systems engineer with a B.Sc. in Computer Science & Engineering. Experienced in scaling high-availability PostgreSQL clusters, container security, and low-latency AI retrieval networks.',
-  avatar: '/author-ashique.jpg',
+  avatar: '/author-ashique.webp',
   linkedin: 'https://www.linkedin.com/in/ashique-hussain-a94738406',
   twitter: 'https://x.com/MrMilli7',
   page: '/about/author',
@@ -69,7 +69,7 @@ export const articles: Article[] = [
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
     image:
-      'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=70&w=800&auto=format&fit=crop',
     imageAlt: 'Abstract AI neural network visualization representing DeepSeek language model',
     keywords: [
       'how to set up deepseek on janitor ai',
@@ -142,7 +142,7 @@ export const articles: Article[] = [
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
     image:
-      'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=70&w=800&auto=format&fit=crop',
     imageAlt: 'European Union flag representing the EU AI Act regulation',
     keywords: [
       'eu ai act news',
@@ -205,7 +205,7 @@ export const articles: Article[] = [
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
     image:
-      'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=70&w=800&auto=format&fit=crop',
     imageAlt: 'Cybersecurity lock and circuit board symbolizing AI-powered security systems',
     keywords: [
       'will cybersecurity be replaced by ai',
@@ -273,7 +273,7 @@ export const articles: Article[] = [
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
     image:
-      'https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?q=70&w=800&auto=format&fit=crop',
     imageAlt: 'Person wearing a VR headset exploring virtual reality experiences',
     keywords: [
       'is virtual reality bad for your eyes',
@@ -326,7 +326,7 @@ export const articles: Article[] = [
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
     image:
-      'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=70&w=800&auto=format&fit=crop',
     imageAlt: 'Blockchain network visualization representing distributed ledger technology',
     keywords: [
       'blockchain in intellectual property',
@@ -389,7 +389,7 @@ export const articles: Article[] = [
     authorLinkedin: AUTHOR.linkedin,
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=70&w=800&auto=format&fit=crop',
     imageAlt: 'AI search engine visualization',
     keywords: [
       'how to improve brand visibility in ai search engines',
@@ -436,7 +436,7 @@ export const articles: Article[] = [
     authorLinkedin: AUTHOR.linkedin,
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
-    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=70&w=800&auto=format&fit=crop',
     imageAlt: 'Server racks for self-hosted software',
     keywords: [
       'what is software automation',
@@ -482,7 +482,7 @@ export const articles: Article[] = [
     authorLinkedin: AUTHOR.linkedin,
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=70&w=800&auto=format&fit=crop',
     imageAlt: 'Medical technology and machine learning data',
     keywords: [
       'hypertension prediction using machine learning kaggle',
@@ -523,7 +523,7 @@ export const articles: Article[] = [
     authorLinkedin: AUTHOR.linkedin,
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=70&w=800&auto=format&fit=crop',
     imageAlt: 'Modern office buildings representing real estate and HR tech',
     keywords: [
       'hr tech news today',
@@ -567,7 +567,7 @@ export const articles: Article[] = [
     authorLinkedin: AUTHOR.linkedin,
     authorTwitter: AUTHOR.twitter,
     authorPage: AUTHOR.page,
-    image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=70&w=800&auto=format&fit=crop',
     imageAlt: 'Gaming PC hardware and rendering engines',
     keywords: [
       'what is new in gaming technology jogametech',

@@ -88,7 +88,7 @@ export default function HomeClient() {
           </div>
         </div>
 
-        <ArticleCard article={heroArticle} variant="featured" />
+        <ArticleCard article={heroArticle} variant="featured" priority={true} />
       </section>
 
       {/* ===== SECTION 2: Latest Articles ===== */}
@@ -129,8 +129,8 @@ export default function HomeClient() {
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 stagger-children"
         >
-          {filteredArticles.slice(0, 6).map((article) => (
-            <ArticleCard key={article.id} article={article} />
+          {filteredArticles.slice(0, 6).map((article, index) => (
+            <ArticleCard key={article.id} article={article} priority={index === 0} />
           ))}
         </div>
 
