@@ -159,7 +159,7 @@ function FeaturedCard({ article, priority }: { article: Article; priority: boole
           <span style={{ fontSize: '13px', color: 'var(--ink-tertiary)' }}>— {article.date}</span>
         </div>
 
-        <h1
+        <h2
           className="group-hover:text-[var(--accent-orange)] transition-colors duration-300"
           style={{
             fontFamily: 'var(--font-display)',
@@ -172,7 +172,7 @@ function FeaturedCard({ article, priority }: { article: Article; priority: boole
           }}
         >
           <Link href={`/blog/${article.slug}`}>{article.title}</Link>
-        </h1>
+        </h2>
 
         <p
           style={{

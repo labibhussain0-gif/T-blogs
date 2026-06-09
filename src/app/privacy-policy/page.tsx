@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: `Privacy Policy | ${SITE_NAME}`,
   description: 'Read the T-blogs Privacy Policy. Learn how we collect, use, and protect your data, including information about Google AdSense and third-party cookies.',
   alternates: { canonical: `${SITE_URL}/privacy-policy` },
+  robots: { index: true, follow: true },
 };
 
 const breadcrumbSchema = generateBreadcrumbSchema([

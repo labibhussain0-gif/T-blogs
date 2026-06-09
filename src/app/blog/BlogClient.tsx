@@ -6,7 +6,7 @@ import CategoryTabs from '@/components/CategoryTabs';
 import { getArticlesByCategory } from '@/data/articles';
 
 const filterCategories = ['All', 'AI Research', 'Engineering', 'Tech Trends'];
-const ARTICLES_PER_PAGE = 6;
+const ARTICLES_PER_PAGE = 36;
 
 export default function BlogClient() {
   const [activeCategory, setActiveCategory] = useState('All');

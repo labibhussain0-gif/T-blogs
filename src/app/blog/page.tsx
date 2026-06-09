@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: `Insights | ${SITE_NAME}`,
   description: 'Read the latest technical deep dives into artificial intelligence, software engineering, and system design.',
   alternates: { canonical: `${SITE_URL}/blog` },
+  robots: { index: true, follow: true },
 };
 
 export default function BlogIndexPage() {

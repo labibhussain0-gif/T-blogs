@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: `Terms of Service | ${SITE_NAME}`,
   description: 'Read the T-blogs Terms of Service. Understand the rules for using our website, our content ownership policy, and limitations of liability.',
   alternates: { canonical: `${SITE_URL}/terms-of-service` },
+  robots: { index: true, follow: true },
 };
 
 const breadcrumbSchema = generateBreadcrumbSchema([

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: `About | ${SITE_NAME}`,
   description: 'Learn about T-blogs, our mission, and the architecture behind our high-end technology and AI platform.',
   alternates: { canonical: `${SITE_URL}/about` },
+  robots: { index: true, follow: true },
 };
 
 export default function AboutPage() {
