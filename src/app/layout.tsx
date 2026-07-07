@@ -61,6 +61,20 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} ${jetbrainsMono.variable} h-full`}
     >
       <head>
+        {/* Domain Redirection (Solve Duplicate Content / Index Dilution) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (window.location.hostname === 't-blogs.web.app' || 
+                  window.location.hostname === 't-blogs.firebaseapp.com' ||
+                  window.location.hostname === 't-blogs-dev.web.app' ||
+                  window.location.hostname === 't-blogs-dev.firebaseapp.com') {
+                window.location.replace('https://tblogs.site' + window.location.pathname + window.location.search + window.location.hash);
+              }
+            `,
+          }}
+        />
+
         {/* Preconnect Candidate Origins */}
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
